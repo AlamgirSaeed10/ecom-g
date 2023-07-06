@@ -41,7 +41,7 @@
                         <div class="row">
                             <div class="mb-3 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
-                                    <select class="form-select" id="PlanID" name="PlanID" >
+                                    <select class="form-select" id="PlanID" name="PlanID" required>
                                         <option value="" selected>Select your Plan *</option>
                                         @php
                                             $plan =\Illuminate\Support\Facades\DB::table('course_plan')->get();
@@ -66,10 +66,10 @@
                                         @endphp
                                         @foreach ($course as $value )
                                             <option
-                                                value="{{$value->CourseName}} {{ old('CourseName') ? 'selected' : '' }}">{{$value->CourseName}}</option>
+                                                value="{{$value->CourseCode}} {{ old('CourseName') ? 'selected' : '' }}">{{$value->CourseName}}</option>
                                         @endforeach
                                     </select>
-                                    <div id="course_selected" name="CourseCode"></div>
+                                    <div id="course_selected" name="course_selected"></div>
                                     @error('course_selected')
                                     <span class="text-danger"> {{ $message }} </span>
                                     @enderror
@@ -79,7 +79,7 @@
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
                                     <input class="form-control" name="StudentName" type="text"
-                                           placeholder="Enter your Name*" value="{{ old('name') }}">
+                                           placeholder="Enter your Name*" value="{{ old('name') }}" required>
                                     @error('name')
                                     <span class="text-danger"> {{ $message }} </span>
                                     @enderror
@@ -88,7 +88,7 @@
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
                                     <input class="form-control valid" name="FatherName" id="father_name" type="text"
-                                           placeholder="Enter your Father Name*" value="{{ old('father_name') }}">
+                                           placeholder="Enter your Father Name*" value="{{ old('father_name') }}" required>
                                     @error('father_name')
                                     <span class="text-danger"> {{ $message }} </span>
                                     @enderror
@@ -97,7 +97,7 @@
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
                                     <input class="form-control valid" name="StudentCNIC" id="cnic" type="text"
-                                           placeholder="Enter your CNIC*" value="{{ old('cnic') }}">
+                                           placeholder="Enter your CNIC*" value="{{ old('cnic') }}" required>
                                     @error('cnic')
                                     <span class="text-danger"> {{ $message }} </span>
                                     @enderror
@@ -106,7 +106,7 @@
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
                                     <input class="form-control valid" name="StudentPhone" id="Phone_no" type="text"
-                                           placeholder="Enter your Phone Number*" value="{{ old('Phone_no') }}">
+                                           placeholder="Enter your Phone Number*" value="{{ old('Phone_no') }}" required>
                                     @error('Phone_no')
                                     <span class="text-danger"> {{ $message }} </span>
                                     @enderror
@@ -115,7 +115,7 @@
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
                                     <input class="form-control valid" name="StudentCity" id="city" type="text"
-                                           placeholder="Enter your City*" value="{{ old('city') }}">
+                                           placeholder="Enter your City*" value="{{ old('city') }}" required>
                                     @error('city')
                                     <span class="text-danger"> {{ $message }} </span>
                                     @enderror
@@ -124,7 +124,7 @@
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
                                     <input class="form-control valid" name="StudentEmail" id="email" type="email"
-                                           placeholder="Enter your Email*" value="{{ old('email') }}">
+                                           placeholder="Enter your Email*" value="{{ old('email') }}" required>
                                     @error('email')
                                     <span class="text-danger"> {{ $message }} </span>
                                     @enderror
@@ -132,7 +132,7 @@
                             </div>
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
-                                    <select name="StudentGender" class="form-select" id="">
+                                    <select name="StudentGender" class="form-select" id="" required>
                                         <option value="" selected>Select Gender *</option>
                                         <option value="male" {{ old('gender') ? 'selected' : '' }}>Male</option>
                                         <option value="female" {{ old('gender') ? 'selected' : '' }}>Female</option>
@@ -144,11 +144,11 @@
                             </div>
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
-                                    <select name="TrainingMode" class="form-select" id="">
+                                    <select name="TrainingMode" class="form-select" id="" required>
                                         <option value="" selected>Select your training mode *</option>
-                                        <option value="0" {{ old('training_mode') ? 'selected' : '' }}>On-site
+                                        <option value="On-site" {{ old('training_mode') ? 'selected' : '' }}>On-site
                                         </option>
-                                        <option value="1" {{ old('training_mode') ? 'selected' : '' }}>Online
+                                        <option value="Online" {{ old('training_mode') ? 'selected' : '' }}>Online
                                         </option>
                                     </select>
                                     @error('training_mode')
@@ -158,12 +158,12 @@
                             </div>
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
-                                    <select name="PaymentOption" class="form-select" id="PaymentOption">
+                                    <select name="PaymentOption" class="form-select" id="" required>
                                         <option value="" selected>Select your Payment *</option>
-                                        <option class="PaymentOption_check" value="0"
+                                        <option class="PaymentOption_check" value="On-Site"
                                             {{ old('PaymentOption') ? 'selected' : '' }}>On-site
                                         </option>
-                                        <option class="PaymentOption_check" value="1"
+                                        <option class="PaymentOption_check" value="Online"
                                             {{ old('PaymentOption') ? 'selected' : '' }}>Online
                                         </option>
                                     </select>
@@ -174,7 +174,7 @@
                             </div>
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
-                                    <select name="KnowAboutUs" class="form-select" id="">
+                                    <select name="KnowAboutUs" class="form-select" id="" required>
                                         <option value="" selected>How did you get to know about us? <span
                                                 class="text-danger">*</span></option>
                                         <option value="social_media" {{ old('heard_from') ? 'selected' : '' }}>Social
@@ -239,7 +239,6 @@
                                     @enderror
                                 </div>
                             </div>
-
                             <div class="col-sm-12 col-md-12 col-lg-12 bg-light p-3 justify-content-sm-around">
                                 <h3 class="text-dark">Terms & Conditions</h3>
                                 <p class="text-muted">After submitting the form the candidate will have 1 day to
@@ -262,24 +261,20 @@
     </section>
 
 
-
-
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
         $(document).ready(function () {
             var PaymentOption_check = $('select[name=PaymentOption] :selected').val();
-            if (PaymentOption_check == 1) {
+            if (PaymentOption_check === 'Online') {
                 $('.attach_doc_div').removeClass('d-none');
                 $('#is_file_visible').val(true);
-                // $('#attach_doc').prop('required', true);
             } else {
                 $('.attach_doc_div').addClass('d-none');
                 $('#is_file_visible').val(false);
-                // $('#attach_doc').prop('required', false);
             }
             $('select[name=PaymentOption]').on('change', function() {
                 var PaymentOption_check = $('select[name=PaymentOption] :selected').val();
-                if (PaymentOption_check == 1) {
+                if (PaymentOption_check === 'Online') {
                     $('.attach_doc_div').removeClass('d-none');
                     $('#is_file_visible').val(true);
                     // $('#attach_doc').prop('required', true);
@@ -291,8 +286,8 @@
             });
             function toggleAttachmentDiv() {
                 var PaymentOption_check = $('select[name=PaymentOption]').val();
-                $('.attach_doc_div').toggleClass('d-none', PaymentOption_check !== '1');
-                $('#is_file_visible').val(PaymentOption_check === '1');
+                $('.attach_doc_div').toggleClass('d-none', PaymentOption_check !== 'Online');
+                $('#is_file_visible').val(PaymentOption_check === 'Online');
             }
 
             toggleAttachmentDiv();
@@ -315,10 +310,11 @@
 
             });
 
-            $('select[id=CourseName]').on('change', function () {
+            $('select[id=CourseName]').on('change', function() {
                 var CourseName = $(this).val();
                 var PlanID = $('select[name=PlanID]').val();
                 var course_selected = $('#course_selected').html();
+
                 if (PlanID === '1') {
                     $('#course_selected').html('<span class="badge bg-primary me-2 p-3 mt-2"><input type="hidden" value="' + CourseName +
                         '" name="course_selected[]">' + CourseName +
@@ -330,8 +326,8 @@
                     var length = $('#course_selected').children().length;
                     $('select[id=CourseName] option').prop('disabled', length >= 2);
                 }
-
             });
+
 
             $('#course_selected').on('click', '.course_select_cancel_btn', function (e) {
                 e.preventDefault();

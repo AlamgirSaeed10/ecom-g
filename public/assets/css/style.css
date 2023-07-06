@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --light: #F0FBFC;
+    --light: #f0d6fc;
     --dark: #181d38;
     --primary: #4A138C;
     --light-purple: #781FA1;
@@ -8,7 +8,9 @@
     --deep-light-purple: #6C1D9D;
     --pink-color: #B765C4;
 }
-
+.bi-icon{
+    font-size: 50px;
+}
 .fw-medium {
     font-weight: 600 !important;
 }
