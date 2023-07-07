@@ -20,6 +20,14 @@ Route::get('verify-certificate',[CertificatesController::class,'certificate'])->
 Route::post('verify-certificate',[CertificatesController::class,'verify_certificate'])->name('pages.verify_certificate');
 
 
+
+Route::post('newsletter',[EcomController::class,'newsletter'])->name('pages.newsletter');
+Route::post('sitemap',[EcomController::class,'sitemap'])->name('pages.sitemap');
+Route::post('privacy-policy',[EcomController::class,'privacy'])->name('pages.privacy-policy');
+
+
+
+
 Route::fallback( function (){
     $title = "404 - Page not Found";
     return view('pages.404-error',compact('title'));
