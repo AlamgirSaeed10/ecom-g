@@ -8,9 +8,11 @@
     --deep-light-purple: #6C1D9D;
     --pink-color: #B765C4;
 }
-.bi-icon{
+
+.bi-icon {
     font-size: 50px;
 }
+
 .fw-medium {
     font-weight: 600 !important;
 }
@@ -107,7 +109,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -437,4 +439,309 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+
+/*============================================================================================ */
+/* Start Courses Details Area css
+============================================================================================ */
+
+
+.course_details_left .course_list li .primary-btn {
+    background: #f9f9f9;
+    color: #7b838a;
+    box-shadow: none;
+    font-size: 12px;
+    border-radius: 0px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: var(--deep-purple);
+    padding: 0px 48px;
+    color: #002347;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 50px;
+    border-radius: 5px;
+    outline: none !important;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+
+.section_gap {
+    padding: 130px 0;
+}
+
+.course_details_area .title {
+    font-size: 21px;
+    border: none;
+    cursor: pointer;
+    margin-top: 40px;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+}
+
+.course_details_area .title:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 1px;
+    width: 74px;
+    background: var(--deep-purple);
+}
+
+.course_details_left .course_list {
+    margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+    .course_details_left .course_list {
+        padding-left: 0;
+    }
+}
+
+.course_details_left .course_list li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.course_details_left .course_list li .primary-btn {
+    background: #f9f9f9;
+    color: #7b838a;
+    box-shadow: none;
+    font-size: 12px;
+    border-radius: 0px;
+}
+
+.course_details_left .course_list li .primary-btn:hover {
+    background: var(--deep-purple);
+    color: #ffffff;
+}
+
+@media (max-width: 575px) {
+    .course_details_left .course_list li .primary-btn {
+        min-width: 100px;
+        font-size: 10px;
+        padding: 0 10px;
+    }
+}
+
+.course_details_left .course_list li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+    .right-contents {
+        margin-top: 50px;
+    }
+}
+
+.right-contents ul {
+    padding-left: 0;
+}
+
+.right-contents ul li {
+    list-style: none;
+    background: #f9f9f9;
+    padding: 10px 22px;
+    margin-bottom: 10px;
+}
+
+.right-contents ul li a {
+    color: #7b838a;
+    text-align: left;
+}
+
+.right-contents ul li a p {
+    margin-bottom: 0px;
+}
+
+.right-contents ul li .or {
+    color: #002347;
+    font-weight: 500;
+}
+
+.right-contents .enroll {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.right-contents .reviews span,
+.right-contents .reviews .star {
+    width: 31%;
+    margin-bottom: 10px;
+}
+
+.right-contents .avg-review {
+    background: #04091e;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 20px 0px;
+}
+
+.right-contents .avg-review span {
+    font-size: 18px;
+    background: var(--deep-purple);
+}
+
+@media (max-width: 991px) {
+    .right-contents .avg-review {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .right-contents .single-reviews .thumb {
+        margin-right: 10px;
+    }
+}
+
+.right-contents .single-reviews h5 {
+    display: inline-flex;
+}
+
+@media (max-width: 1024px) {
+    .right-contents .single-reviews h5 {
+        display: block;
+    }
+}
+
+.right-contents .single-reviews h5 .star {
+    margin-left: 10px;
+}
+
+@media (max-width: 1024px) {
+    .right-contents .single-reviews h5 .star {
+        margin: 10px 0;
+    }
+}
+
+.right-contents .feedeback {
+    margin-top: 30px;
+}
+
+.right-contents .feedeback textarea {
+    resize: none;
+    height: 130px;
+    background: #f9f9ff;
+}
+
+.right-contents .feedeback textarea:focus {
+    box-shadow: none;
+}
+
+.right-contents .star .checked {
+    color: #fdc632;
+}
+
+.right-contents .comments-area {
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.right-contents .comments-area .star {
+    margin-left: 20px;
+}
+
+/* End  Courses Details Area css
+
+/*====================================================*/
+/*CUSTOM CARDS*/
+/*====================================================*/
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+
+.card {
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    border-radius: 10px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 15px auto 0;
+    padding: 1.5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16), 0 4px 10px rgba(0, 0, 0, 0.23);
+}
+.card-head {
+    padding: 15px;
+    border-bottom: 2px solid rebeccapurple;
+}
+
+.card-head-icon {
+    border: 2px solid;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 100%;
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.custom-hover .hidden-desc {
+    display: none;
+}
+
+.custom-hover:hover .hidden-desc {
+    display: block;
+}
+
+.custom-icon {
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    font-size: 25px;
+    background-color: white;
 }

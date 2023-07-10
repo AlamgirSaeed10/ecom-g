@@ -71,7 +71,7 @@ class EnrollmentController extends Controller
 
             $mail = new PHPMailer(true);
             try {
-                $mail->SMTPDebug = 1; // Enable verbose debug output
+                $mail->SMTPDebug = 1;
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;

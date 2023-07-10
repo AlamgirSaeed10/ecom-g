@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 class EcomController extends Controller
 {
     public function index()
@@ -37,7 +39,42 @@ class EcomController extends Controller
     }
 
     public function contact_us_form(Request $request){
-        return $request;
+
+        $data = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
+
+        $mail = new PHPMailer(true);
+        try {
+            $mail->SMTPDebug = 1;
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'muhammadalamgir10@gmail.com';
+            $mail->Password = 'znensgwmxpgeflzi';
+            $mail->SMTPSecure = 'tls';
+            $mail->Port = 587;
+
+            $mail->setFrom($data['email'], $data['name']);
+
+            $mail->addAddress("muhammadalamgir10@gmail.com",$data['name']);
+            $mail->Subject = 'Contact us Form Query From ' . $request->name;
+            $mail->Body .= "Name : " . $data['name'] . "<br>";
+            $mail->Body .= "Email : " . $data['email'] . "<br>";
+            $mail->Body .= "Subject : " . $data['subject'] . "<br>";
+            $mail->Body .= "Message : " . $data['message'] . "<br>";
+
+            $mail->isHTML(true);
+            $mail->send();
+            $mail->ClearAddresses();
+
+            return redirect()->back()->with('success','Thank you for contacting Us. Our team will contact you shortly!  ');
+        } catch (Exception $e) {
+            return redirect()->back()->with('success','Email could not be sent. Error: ', $mail->ErrorInfo);
+        }
     }
 
     public function privacy()

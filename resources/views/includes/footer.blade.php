@@ -2,20 +2,12 @@
 <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">
         <div class="row g-5">
-            <div class="col-lg-2 col-md-6">
+            <div class="col-sm-10 col-lg-3 col-md-3 text-center">
                 <div class="position-relative mx-auto" style="max-width: 400px;">
-                    <img src="{{asset('assets/img/gallery/eservices_verified.png')}}" alt="" style="max-width: 180px">
+                    <img src="{{asset('assets/img/gallery/eservices_verified.png')}}" class="img-fluid" alt="eservice verified logo is here">
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6">
-                <h4 class="text-white mb-3">Quick Link</h4>
-                <a class="btn btn-link" href=""><i class="bi bi-chevron-right fw-semi-bold"></i> About Us</a>
-                <a class="btn btn-link" href=""><i class="bi bi-chevron-right fw-semi-bold"></i> Contact Us</a>
-                <a class="btn btn-link" href=""><i class="bi bi-chevron-right fw-semi-bold"></i> Privacy Policy</a>
-                <a class="btn btn-link" href=""><i class="bi bi-chevron-right fw-semi-bold"></i> Terms & Condition</a>
-                <a class="btn btn-link" href=""><i class="bi bi-chevron-right fw-semi-bold"></i> FAQs & Help</a>
-            </div>
-            <div class="col-lg-5 col-md-6 col-sm-12">
+            <div class="col-sm-12 col-lg-6 col-md-5">
                 <h4 class="text-white mb-3">Contact</h4>
                 <p class="text-capitalize text-white"><i class="bi bi-geo-alt me-3"></i>
                     Basement, Malik Tower, Block B Citi Housing Jhelum</p>
@@ -42,8 +34,7 @@
                             class="bi bi-telegram"></i></a>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-6 hidden-sm">
+            <div class="col-sm-12 col-lg-3 col-md-4 d-none d-lg-block">
                 <h4 class="text-white mb-3 hidden-sm">Newsletter</h4>
                 <p>Subscribe newsletter to stay up to date with new promotions.</p>
                 <div class="position-relative mx-auto" style="max-width: 400px;">

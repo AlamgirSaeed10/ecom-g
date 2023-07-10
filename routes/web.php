@@ -7,9 +7,13 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[EcomController::class,'index'])->name('pages.index');
+
 Route::get('about',[EcomController::class,'about'])->name('pages.about');
+
 Route::get('courses',[EcomController::class,'courses'])->name('pages.courses');
+
 Route::get('services',[EcomController::class,'services'])->name('pages.services');
+
 Route::get('contact-us',[EcomController::class,'contact_us'])->name('pages.contact-us');
 Route::post('contact-us',[EcomController::class,'contact_us_form'])->name('pages.contact-us-form');
 
