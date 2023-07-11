@@ -22,6 +22,8 @@ Route::post('enrollment',[EnrollmentController::class,'store_enrollment'])->name
 
 Route::get('verify-certificate',[CertificatesController::class,'certificate'])->name('pages.certificate');
 Route::post('verify-certificate',[CertificatesController::class,'verify_certificate'])->name('pages.verify_certificate');
+Route::get('verify/{CertID}',[CertificatesController::class,'verify_certificate_online'])->name('pages.verify_certificate_online');
+
 
 
 

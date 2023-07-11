@@ -1,22 +1,28 @@
 @extends('includes.master')
+@section('title',$title)
 @section('content')
+    <style>iframe {
+            border: none;
+            width: 100%;
+            height: 100vh;
+        }</style>
     <section class="py-5 m-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-7 col-lg-8">
-                    <div class="section-tittle text-center mb-55 mt-50">
-                        <h2>Have a happy Learning!</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="container text-center">
-                <h1 class="display-4">Verification is Under Maintenance</h1>
-                <p class="text-center">We apologize for the inconvenience, but we're performing some maintenance at the
-                    moment. Please check back soon!</p>
-                <p class="text-center">for more info <br><a href="{{route('pages.contact-us')}}" class="btn btn-outline-dark"><strong>Contact
-                            Us</strong></a></p>
-            </div>
+            <iframe src="" id="myCert"></iframe>
+
+            <input type="hidden" name="" value="{{$stdName}}" id="StudentName">
+            <input type="hidden" name="" value="{{$courseName}}" id="CourseName">
+            <input type="hidden" name="" value="{{$compDate}}" id="CompDate">
+
+            <p class="invisible" id="cert-url">{{url('verify')}}/{{$CertID}}</p>
+
+            <button type="submit" id="download_cert" class="btn btn-outline-success float-end"><i class="bi bi-download"></i> Download Certificate</button>
         </div>
     </section>
+
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+    <script src="{{asset('assets/js/cert.js')}}"></script>
+    <script src="{{asset('assets/js/filesaver.js')}}"></script>
 
 @endsection
