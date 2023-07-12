@@ -86,7 +86,7 @@
                         <div class="p-4">
                             <i class="bi bi-clock text-primary mb-4 bi-icon"></i>
                             <h5 class="mb-3">Lifetime Access</h5>
-                            <p>Unlimited availability to educational resources for continuous growth and development</p>
+                            <p>Unlimited educational resources for continuous growth and development</p>
                         </div>
                     </div>
                 </div>
@@ -98,12 +98,13 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="{{asset('assets/img/about.jpg')}}"
+                        <img class="img-fluid position-absolute w-100 h-100"
+                             src="{{asset('assets/img/gallery/about2.png')}}"
                              alt="" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                    <h6 class="section-title bg-white text-start text-primary pe-3">Our Mission</h6>
                     <h1 class="mb-4">Welcome to Ecomgladiators</h1>
                     <p class="mb-4">EcomGladiators empowers entrepreneurs, builds Amazon business to the next level, and
                         drives
@@ -116,23 +117,27 @@
                         successful entrepreneurs.</p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Empowering Entrepreneurs</p>
+                            <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Empowering Entrepreneurs
+                            </p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Elevating Amazon Businesses</p>
+                            <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Elevating Amazon
+                                Businesses</p>
                         </div>
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Driving Better Sales
                             </p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Launching Startups in eCommerce</p>
+                            <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Launching Startups in
+                                eCommerce</p>
                         </div>
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Marketplaces Mastery</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Amazon Business Acceleration
+                            <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Amazon Business
+                                Acceleration
                             </p>
                         </div>
                     </div>
@@ -145,50 +150,126 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
-                <h1 class="mb-5">Popular Courses</h1>
+                <h1 class="mb-5">Explore Top Subjects</h1>
             </div>
+            <?php
+            $services =
+                ["AMAZON SELLER CENTRAL MANAGEMENT", "PL PRODUCT RESEARCH", "EXTENSIVE KEYWORD RESEARCH",
+                    "PRODUCT LISTING OPTIMIZATION", "ORDER PROCESSING AND TRACKING",
+                    "WHOLESALE ACCOUNT APPROVAL", "WHOLESALE PRODUCT HUNTING", "INVENTORY MANAGEMENT"];
+            ?>
+
+
             <div class="row g-4 justify-content-center">
-                @php
-                $course = \Illuminate\Support\Facades\DB::table('courses_offered')->get();
-                @endphp
-                @foreach($course as $key =>$value)
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.{{++$key}}s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="{{asset('assets/img/course-1.jpg')}}" alt="">
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
-                                   style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3"
-                                   style="border-radius: 0 30px 30px 0;">Join Now</a>
+
+                @foreach($services as $key => $value)
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="course-item bg-light">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid" src="{{asset('assets/img/gallery/topic')}}{{++$key}}{{'.png'}}"
+                                     alt="">
+                            </div>
+                            <div class="text-center p-4 pb-2">
+                                <h5 class="mb-4">{{$value}}</h5>
                             </div>
                         </div>
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
-                            <div class="mb-3">
-                                <small class="bi bi-star-fill text-primary"></small>
-                                <small class="bi bi-star-fill text-primary"></small>
-                                <small class="bi bi-star-fill text-primary"></small>
-                                <small class="bi bi-star-fill text-primary"></small>
-                                <small class="bi bi-star text-primary"></small>
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">{{$value->CourseName}}</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30
-                                Students</small>
-                        </div>
+
                     </div>
-                </div>
                 @endforeach
+                <div class="col-lg-12 text-center">
+                    <a href="{{route('pages.courses')}}" class="btn btn-outline-primary"><i
+                            class="bi bi-box-arrow-in-up-right"></i> View More</a>
+                </div>
             </div>
         </div>
     </div>
+
+
+
+
+
+    <div class="container py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
+                <h1 class="mb-5">Services we provide</h1>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="card">
+                        <div class="card-head">
+                            <i class="bi bi-box-seam card-head-icon text-center" aria-expanded="false"></i>
+                            <h5>Wholesale Business</h5>
+                        </div>
+                        <div class="card-body text-start custom-hover">
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Research Brands/Distributors</p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Winning Product Selection</p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Source and negotiate with suppliers </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Shipment and Restocking</p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Sales and order
+                                management</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="card">
+                        <div class="card-head">
+                            <i class="bi bi-trophy card-head-icon text-center"
+                               aria-expanded="false"></i>
+                            <h5>Brand Approval & Winning Product</h5>
+                        </div>
+                        <div class="card-body text-start custom-hover">
+
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Communication and Documentation </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Domain-Specific Account Approval </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Product on suggested criteria </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Restocking and Labeling </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="card">
+                        <div class="card-head">
+                            <i class="bi bi-code-slash card-head-icon text-center"
+                               aria-expanded="false"></i>
+                            <h5>Ecommerce Website Development</h5>
+                        </div>
+                        <div class="card-body text-start custom-hover">
+
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> E-commerce Website Design </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Custom E-commerce Development </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> E-commerce Platform Selection </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> E-commerce Website Migration </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Payment Gateway
+                                Integration </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> E-commerce SEO </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> E-commerce Analytics
+                                and Reporting </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Mobile App
+                                Development </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Ongoing Support and
+                                Maintenance </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> E-commerce Consulting
+                                and Strategy </p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 p-3 text-center">
+                <a href="{{route('pages.services')}}" class="btn btn-outline-success">
+                    <i class="bi bi-arrow-right-short"></i> View More
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
     <div class="container-xxl py-5">
         <div class="container">

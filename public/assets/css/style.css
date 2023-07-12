@@ -745,3 +745,15 @@
     font-size: 25px;
     background-color: white;
 }
+
+.content-detail {
+    display: none;
+}
+
+/*.course_list h6:before {*/
+/*    content: '\f4d6';*/
+/*    font-family: 'Bootstrap Icons';*/
+/*    margin-right: 10px;*/
+/*    class: 'bi bi-book';*/
+/*}*/
+

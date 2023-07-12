@@ -4,7 +4,11 @@
         <div class="row g-5">
             <div class="col-sm-10 col-lg-3 col-md-3 text-center">
                 <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <a href="https://eservices.secp.gov.pk/eServices/ControllerServlet?request_id=VERIFY_ONLINE_INCORP_CERT&id=0208828"
+                       target="_blank">
                     <img src="{{asset('assets/img/gallery/eservices_verified.png')}}" class="img-fluid" alt="eservice verified logo is here">
+                    </a>
+
                 </div>
             </div>
             <div class="col-sm-12 col-lg-6 col-md-5">

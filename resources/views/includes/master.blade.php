@@ -8,7 +8,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <link href="{{asset('assets/img/favicon.png')}}" rel="icon">
+    <link href="{{asset('assets/img/logo/ecom-logo-head.png')}}" rel="icon">
     <link href="{{asset('assets/css/font-family.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="{{asset('assets/css/bootstrap-icons.css')}}" rel="stylesheet">
@@ -33,7 +33,7 @@
 <!-- Spinner End -->
 
 @include('includes.header')
-    @yield('content')
+@yield('content')
 @include('includes.footer')
 
 <!-- Back to Top -->

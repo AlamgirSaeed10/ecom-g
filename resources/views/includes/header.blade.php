@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
 
-    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+    <a href="{{route('pages.index')}}" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <img src="{{asset('/assets/img/logo/logo.png')}}"  alt="logo of ecomgladiators"  height="50px" />
     </a>
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CertificatesController;
+use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\EcomController;
 use App\Http\Controllers\EnrollmentController;
 use Illuminate\Support\Facades\Route;
@@ -25,12 +26,21 @@ Route::post('verify-certificate',[CertificatesController::class,'verify_certific
 Route::get('verify/{CertID}',[CertificatesController::class,'verify_certificate_online'])->name('pages.verify_certificate_online');
 
 
-
-
 Route::post('newsletter',[EcomController::class,'newsletter'])->name('pages.newsletter');
-Route::post('sitemap',[EcomController::class,'sitemap'])->name('pages.sitemap');
-Route::post('privacy-policy',[EcomController::class,'privacy'])->name('pages.privacy-policy');
 
+Route::get('sitemap',[EcomController::class,'sitemap'])->name('pages.sitemap');
+Route::get('privacy-policy',[EcomController::class,'privacy'])->name('pages.privacy-policy');
+
+
+/*=======================================*/
+/*          COURSES PAGES                */
+/*=======================================*/
+
+Route::get('whole-sale',[CoursesController::class,'whole_sale'])->name('courses.whole-sale');
+Route::get('private-label',[CoursesController::class,'private_label'])->name('courses.private-label');
+Route::get('digital-marketing',[CoursesController::class,'digital_marketing'])->name('courses.digital-marketing');
+Route::get('freelancing',[CoursesController::class,'freelancing'])->name('courses.freelancing');
+Route::get('online-arbitrage',[CoursesController::class,'online_arbitrage'])->name('courses.online-arbitrage');
 
 
 
