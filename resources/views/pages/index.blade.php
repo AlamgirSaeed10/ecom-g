@@ -18,7 +18,8 @@
                                 <a href="{{route('pages.about')}}"
                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
                                     More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get a Quote!</a>
+                                <a href="" aria-expanded="false"
+                                   data-bs-toggle="modal" data-bs-target="#get-quote" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get a Quote!</a>
                             </div>
                         </div>
                     </div>
@@ -36,10 +37,11 @@
                                 <h1 class="display-3 text-white animated slideInDown">Global E-commerce Business</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Expand your e-commerce presence globally and drive
                                     your business toward unprecedented growth</p>
-                                <a href="{{route('pages.about')}}}"
+                                <a href="{{route('pages.about')}}"
                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
                                     More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get a Quote!</a>
+                                <a href="" aria-expanded="false"
+                                   data-bs-toggle="modal" data-bs-target="#get-quote" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get a Quote!</a>
                             </div>
                         </div>
                     </div>
@@ -306,6 +308,90 @@
                             <img class="img-fluid" src="{{asset('assets/img/gallery/N_shumaila.png')}}" alt="">
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="get-quote" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Get a Quote</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-contact contact_form" id="enrollment_form" action="{{route('get-quote')}}" method="POST">
+                        @csrf
+                        <div class="form-group">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name">Name</label>
+                            <input type="text" class="form-control" id="cname" name="cname"
+                                   placeholder="Enter your fullname">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-Email">Email</label>
+                            <input type="email" class="form-control" id="cemail" name="cemail"
+                                   placeholder="Enter your email">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name">Contact (Whatsapp/Telegram)</label>
+                            <input type="text" class="form-control" id="ccontact" name="ccontact"
+                                   placeholder="Enter Contact (Whatsapp/Telegram)">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name">Estimated Budget</label>
+                            <input type="number" class="form-control" id="cbudget" name="cbudget"
+                                   placeholder="Enter your Estimated budget">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name">Select Service</label>
+                            <select name='cselectservice' class='form-control'>
+                                <option selected>Please select the Service</option>
+                                <option value="Wholesale Business">Wholesale Business</option>
+                                <option value="Private Label Business">Private Label Business</option>
+                                <option value="Amazon Account Reinstatemen">Amazon Account Reinstatement</option>
+                                <option value="Brand Approval & Winning Product">Brand Approval & Winning Product
+                                </option>
+                                <option value="LLC/LTD (Company) Registration">LLC/LTD (Company) Registration</option>
+                                <option value="Ecommerce Website Development">Ecommerce Website Development</option>
+                            </select>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name">Amazon Account </label>
+                            <select name="camazonaccount" class="form-control">
+                                <option selected>Please select Account Type</option>
+                                <option value="New">New</option>
+                                <option value="Old">Old</option>
+                                <option value="Need Account">Need Account</option>
+
+                            </select>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name">Service Required</label>
+                            <select name='crequired' class='form-control'>
+                                <option selected>Please select the Service Required</option>
+                                <option value="Semi Managed">Semi Managed</option>
+                                <option value="Fully Managed">Fully Managed</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

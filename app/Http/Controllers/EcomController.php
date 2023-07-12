@@ -92,5 +92,52 @@ class EcomController extends Controller
         DB::table('newsletter')->insert(['NewsletterEmail'=>$request->NewsletterEmail]);
         return redirect()->back()->with('success','You have subscribed successfully. Our team will contact you shortly');
     }
+
+    public function get_quote(Request $request)
+    {
+        $data = array(
+            'cname' => $request->cname,
+            'cemail' => $request->cemail,
+            'ccontact' => $request->ccontact,
+            'cbudget' => $request->cbudget,
+            'cselectservice' => $request->cselectservice,
+            'camazonaccount' => $request->camazonaccount,
+            'crequired' => $request->crequired
+        );
+
+        $mail = new PHPMailer(true);
+        try {
+            $mail->SMTPDebug = 0; // Enable verbose debug output
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'muhammadalamgir10@gmail.com';
+            $mail->Password = 'znensgwmxpgeflzi';
+            $mail->SMTPSecure = 'tls';
+            $mail->Port = 587;
+
+            $mail->setFrom('admission@ecomgladiators.com', 'Ecom Gladiators');
+
+            $mail->addAddress("muhammadalamgir10@gmail.com",$request->cname);
+            $mail->Subject = 'Request for Quotetaion from ' . $request->cname;
+
+            $mail->Body  = "Name: {$data['cname']}<br>";
+            $mail->Body .= "Email: {$data['cemail']}<br>";
+            $mail->Body .= "Contact: {$data['ccontact']}<br>";
+            $mail->Body .= "Budget: {$data['cbudget']}<br>";
+            $mail->Body .= "Service: {$data['cselectservice']}<br>";
+            $mail->Body .= "Amazon Account: {$data['camazonaccount']}<br>";
+            $mail->Body .= "Requirements: {$data['crequired']}<br>";
+
+            $mail->isHTML(true);
+            $mail->send();
+            $mail->ClearAddresses();
+
+            return redirect()->back()->with('success','Thank you for your submission. Our sales representative will contact you shortly');
+        } catch (Exception $e) {
+            return redirect()->back()->with('success','Email could not be sent. Error: ', $mail->ErrorInfo);
+        }
+    }
+
 }
 

@@ -31,6 +31,7 @@ Route::post('newsletter',[EcomController::class,'newsletter'])->name('pages.news
 Route::get('sitemap',[EcomController::class,'sitemap'])->name('pages.sitemap');
 Route::get('privacy-policy',[EcomController::class,'privacy'])->name('pages.privacy-policy');
 
+Route::post('get-quote', [EcomController::class, 'get_quote'])->name('get-quote');
 
 /*=======================================*/
 /*          COURSES PAGES                */
