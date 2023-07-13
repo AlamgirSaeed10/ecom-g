@@ -20,7 +20,7 @@
                         <input class="form-control" name="CertificateNo" type="text" placeholder="Enter Certificate Number" required>
 
                         <div class="form-group mt-3 mb-3 float-end">
-                            <button type="submit" class="btn btn-outline-dark" >Enroll Now</button>
+                            <button type="submit" class="btn btn-outline-success" >Check Certificate</button>
                         </div>
                     </form>
 

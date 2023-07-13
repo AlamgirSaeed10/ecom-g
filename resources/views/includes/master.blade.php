@@ -20,18 +20,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <style>
+
+    </style>
+
+
 </head>
 
 <body>
-<!-- Spinner Start -->
-<div id="spinner"
-     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-        <span class="sr-only"></span>
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="{{asset('assets/img/logo/ecom-logo-head.png')}}" alt="EcomGladiators logo image ">
+            </div>
+        </div>
     </div>
 </div>
-<!-- Spinner End -->
-
 @include('includes.header')
 @yield('content')
 @include('includes.footer')
@@ -39,6 +45,15 @@
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+
+<script>
+    $(window).on('load', function () {
+        $('#preloader-active').delay(450).fadeOut('slow');
+        $('body').delay(450).css({
+            'overflow': 'visible'
+        });
+    });
+</script>
 <script src="{{asset('assets/js/jquery-3.4.1.min.js')}}"></script>
 <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('assets/lib/wow/wow.min.js')}}"></script>

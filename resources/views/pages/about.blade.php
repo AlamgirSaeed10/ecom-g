@@ -46,7 +46,7 @@
                     <h6 class="section-title bg-white text-center text-primary px-3">About Us</h6>
                     <h1 class="mb-5">Welcome to Ecomgladiators</h1>
 
-                    <p class="mb-4 text-start">Ecomgladiators empowers entrepreneurs, builds Amazon business to the next
+                    <p class="mb-4" style="text-align: justify;">Ecomgladiators empowers entrepreneurs, builds Amazon business to the next
                         level, and
                         drives
                         better sales also help clients to navigate all challenges that USA and UK marketplaces throw at

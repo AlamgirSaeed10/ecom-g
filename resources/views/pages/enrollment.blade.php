@@ -1,6 +1,12 @@
 @extends('includes.master')
 @section('title',$title)
 @section('content')
+
+{{--    <div class="container-fluid" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">--}}
+{{--        <img src="{{asset('assets/img/hero/h1_hero.png')}}" class="img-fluid" alt="e-service verified logo is here"--}}
+{{--             style="max-height: 350px; min-width: 100%;">--}}
+{{--    </div>--}}
+
     <section class="py-5 mt-100">
         <div class="container">
             <div class="row justify-content-center">
@@ -14,7 +20,7 @@
                 <div class="border col-lg-8 mx-auto pt-4 px-5 shadow">
                     <h4 class="text-center pb-4">Please fill the form for your desired course intake</h4>
                     <form class="form-contact contact_form" id="enrollment_form"
-                          action="{{ route('pages.store_enrollment') }}"
+                          action="{{ route('pages.store_enrollment') }}" id="enrollmentForm"
                           method="post" enctype="multipart/form-data">
                         @csrf
                         @php
@@ -28,9 +34,9 @@
                         @endphp
                         <input type="hidden" readonly name="StudentID" class="form-control" required
                                value="{{ $studentID }}">
-                        @if (session()->has('errors'))
+                        @if (session()->has('error'))
                             <div class="alert alert-danger">
-                                {{ session()->get('errors') }}
+                                {{ session()->get('error') }}
                             </div>
                         @elseif (session()->has('success'))
                             <div class="alert alert-success">
@@ -47,7 +53,8 @@
                                             $plan =\Illuminate\Support\Facades\DB::table('course_plan')->get();
                                         @endphp
                                         @foreach ($plan as $value )
-                                            <option value="{{$value->PlanID}}" {{ old('PlanID') ? 'selected' : '' }}>{{$value->PlanTitle}}</option>
+                                            <option
+                                                value="{{$value->PlanID}}" {{ old('PlanID') ? 'selected' : '' }}>{{$value->PlanTitle}}</option>
                                         @endforeach
 
                                     </select>
@@ -78,38 +85,53 @@
                             </div>
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
-                                    <input class="form-control" name="StudentName" type="text"
-                                           placeholder="Enter your Name*" value="{{ old('name') }}" required>
-                                    @error('name')
-                                    <span class="text-danger"> {{ $message }} </span>
+                                    <input class="form-control" name="StudentName" id="Student_Name" type="text"
+                                           placeholder="Enter your Name*" value="{{ old('StudentName') }}"
+                                           pattern="[A-Za-z ]+" required>
+                                    @error('StudentName')
+                                    <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+
                             </div>
+
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
                                     <input class="form-control valid" name="FatherName" id="father_name" type="text"
-                                           placeholder="Enter your Father Name*" value="{{ old('father_name') }}" required>
-                                    @error('father_name')
-                                    <span class="text-danger"> {{ $message }} </span>
+                                           placeholder="Enter your Father Name*" value="{{ old('father_name') }}"
+                                           pattern="[A-Za-z ]+"
+                                           required>
+                                    @error('FatherName')
+                                    <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+
                             </div>
+
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
                                     <input class="form-control valid" name="StudentCNIC" id="cnic" type="text"
-                                           placeholder="Enter your CNIC*" value="{{ old('cnic') }}" required>
-                                    @error('cnic')
-                                    <span class="text-danger"> {{ $message }} </span>
+                                           placeholder="Enter your CNIC*" pattern="[0-9]{5}-[0-9]{7}-[0-9]{1}"
+                                           maxlength="15" value="{{ old('StudentCNIC') }}" required
+                                           data-toggle="tooltip" data-placement="right"
+                                           title="Format: xxxxx-xxxxxxxx-x">
+                                    @error('StudentCNIC')
+                                    <span class="text-danger">{{ $message }}</span>
                                     @enderror
+
+
                                 </div>
                             </div>
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
                                     <input class="form-control valid" name="StudentPhone" id="Phone_no" type="text"
-                                           placeholder="Enter your Phone Number*" value="{{ old('Phone_no') }}" required>
-                                    @error('Phone_no')
-                                    <span class="text-danger"> {{ $message }} </span>
+                                           placeholder="Enter your Phone Number*" pattern="923[0-9]{9}"
+                                           data-toggle="tooltip" data-placement="right" title="Format: 923000000000"
+                                           maxlength="12" value="{{ old('StudentPhone') }}" required>
+                                    @error('StudentPhone')
+                                    <span class="text-danger">{{ $message }}</span>
                                     @enderror
+
                                 </div>
                             </div>
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
@@ -132,10 +154,25 @@
                             </div>
                             <div class="mb-3 col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group">
-                                    <select name="StudentGender" class="form-select" id="" required>
-                                        <option value="" selected>Select Gender *</option>
-                                        <option value="male" {{ old('gender') ? 'selected' : '' }}>Male</option>
-                                        <option value="female" {{ old('gender') ? 'selected' : '' }}>Female</option>
+                                    <select name="StudentEducation" class="form-select" id="StudentEducation" required>
+                                        <option value="" selected>Select Education *</option>
+                                        <option value="Primary" {{ old('StudentEducation') ? 'selected' : '' }}>
+                                            Primary
+                                        </option>
+                                        <option value="Middle" {{ old('StudentEducation') ? 'selected' : '' }}>Middle
+                                        </option>
+                                        <option value="Matriculation" {{ old('StudentEducation') ? 'selected' : '' }}>
+                                            Matriculation
+                                        </option>
+                                        <option value="Intermediate" {{ old('StudentEducation') ? 'selected' : '' }}>
+                                            Intermediate
+                                        </option>
+                                        <option value="Bachelors" {{ old('StudentEducation') ? 'selected' : '' }}>
+                                            Bachelors
+                                        </option>
+                                        <option value="Masters" {{ old('StudentEducation') ? 'selected' : '' }}>
+                                            Masters
+                                        </option>
                                     </select>
                                     @error('gender')
                                     <span class="text-danger"> {{ $message }} </span>
@@ -183,13 +220,13 @@
                                         <option value="ads" {{ old('heard_from') ? 'selected' : '' }}>Ads</option>
                                         <option value="google" {{ old('heard_from') ? 'selected' : '' }}>Google
                                         </option>
-                                        <option value="friend_family" {{ old('heard_from') ? 'selected' : '' }}>
+                                        <option value="friend family" {{ old('heard_from') ? 'selected' : '' }}>
                                             Friends/Family
                                         </option>
-                                        <option value="offcie_employee" {{ old('heard_from') ? 'selected' : '' }}>
+                                        <option value="office employee" {{ old('heard_from') ? 'selected' : '' }}>
                                             Office employee
                                         </option>
-                                        <option value="office_trainee" {{ old('heard_from') ? 'selected' : '' }}>
+                                        <option value="office trainee" {{ old('heard_from') ? 'selected' : '' }}>
                                             Office Trainee
                                         </option>
                                         <option value="others" {{ old('heard_from') ? 'selected' : '' }}>Others
@@ -239,30 +276,147 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-12 col-lg-12 bg-light p-3 justify-content-sm-around">
+                            <div class="col-sm-12 col-md-12 col-lg-12 bg-light p-3 justify-content-sm-around"
+                                 style="text-align: justify;">
                                 <h3 class="text-dark">Terms & Conditions</h3>
-                                <p class="text-muted">After submitting the form the candidate will have 1 day to
-                                    send the cancel request via email.
-                                    The refund process will take maximum 5 business days.</p>
-                                <p class="text-muted">After the confirmation email, the candidate will be enrolled so
-                                    the request for refund will not be accepted</p>
-                                <p class="text-muted">On course completion, the candidate will be given the
-                                    certificate after the successful analysis test results.</p>
+                                <ol style="text-align: justify; line-height:2">
+                                    <li>Upon enrollment, trainees are eligible for a full refund of their training fees
+                                        within two (2) days from the date of registration.
+                                    </li>
+                                    <li>To request a refund within the eligibility period, trainees must submit a
+                                        written request via email or in-person to the training coordinator.
+                                    </li>
+                                    <li>After the two-day refund eligibility period, all training fees become
+                                        non-refundable.
+                                    </li>
+                                    <li>If, for any reason, the training program is canceled or rescheduled by
+                                        Ecomgladiators, alternative arrangements will be offered, and eligible trainees
+                                        may opt for a refund if desired.
+                                    </li>
+                                    <li>On course completion, the candidate will be given the certificate only after the
+                                        successful assessment results.
+                                    </li>
+                                </ol>
+
+
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12 mt-3">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="terms" id="terms_check"
+                                               required>
+                                        <label class="form-check-label" for="terms_check">
+                                            &nbsp; I accept the terms and conditions
+                                        </label>
+                                    </div>
+                                    @error('terms')
+                                    <span class="text-danger">Please accept the terms and conditions to proceed</span>
+                                    @enderror
+                                </div>
                             </div>
                             <div class="col-sm-12 float-end mt-3">
-                                <button type="submit" class="btn btn-outline-primary mb-3">Enroll Now</button>
+                                <button type="submit" id="btn-submit" class="btn btn-outline-primary mb-3">Enroll Now
+                                </button>
 
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
+            <div class="container pt-4 px-5 mt-3">
+                <h5 class="text-center">FAQ</h5>
+                <div class="accordion mt-5" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <strong>Q1. What is the nature of the training provided? Is it theoretical or
+                                    practical?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                             data-bs-parent="#accordionExample" style="">
+                            <div class="accordion-body">
+                                Answer: Our training approach emphasizes hands-on practical experience and is based on
+                                real-world client scenarios.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <strong>Q2. Are students allowed to utilize the office premises for practice after
+                                    completing the course?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                             data-bs-parent="#accordionExample" style="">
+                            <div class="accordion-body">
+                                Answer: Certainly! If there are available seats, we welcome students to utilize our
+                                office space for practice without any additional charges.
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <strong>Q3. Are job opportunities available upon completing the course?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                             data-bs-parent="#accordionExample" style="">
+                            <div class="accordion-body">
+                                Answer: Yes, we offer job opportunities based on individual performance and availability
+                                upon completion of the course.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <strong>Q4. Can I obtain a certificate without undergoing any assessments?
+                                </strong>
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                             data-bs-parent="#accordionExample" style="">
+                            <div class="accordion-body">
+                                Answer: Regrettably, we only issue certificates to candidates who successfully pass the
+                                assessments after completing the course. The assessment is designed to ensure that our
+                                graduates have the skills and knowledge necessary to be successful in their careers.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <strong>Q5. Do you offer training classes in the evening or at night?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                             data-bs-parent="#accordionExample" style="">
+                            <div class="accordion-body">
+                                Answer: Our onsite training classes are scheduled from morning to evening. However, for
+                                online students, we can accommodate training sessions after evening hours, subject to
+                                consultation and agreement.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </section>
-
-
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
         $(document).ready(function () {
             var PaymentOption_check = $('select[name=PaymentOption] :selected').val();
             if (PaymentOption_check === 'Online') {
@@ -272,7 +426,7 @@
                 $('.attach_doc_div').addClass('d-none');
                 $('#is_file_visible').val(false);
             }
-            $('select[name=PaymentOption]').on('change', function() {
+            $('select[name=PaymentOption]').on('change', function () {
                 var PaymentOption_check = $('select[name=PaymentOption] :selected').val();
                 if (PaymentOption_check === 'Online') {
                     $('.attach_doc_div').removeClass('d-none');
@@ -284,6 +438,7 @@
                     // $('#attach_doc').prop('required', false);
                 }
             });
+
             function toggleAttachmentDiv() {
                 var PaymentOption_check = $('select[name=PaymentOption]').val();
                 $('.attach_doc_div').toggleClass('d-none', PaymentOption_check !== 'Online');
@@ -310,7 +465,7 @@
 
             });
 
-            $('select[id=CourseName]').on('change', function() {
+            $('select[id=CourseName]').on('change', function () {
                 var CourseName = $(this).val();
                 var PlanID = $('select[name=PlanID]').val();
                 var course_selected = $('#course_selected').html();
@@ -336,7 +491,14 @@
                 $('select[id=CourseName] option').prop('disabled', length >= 2);
             });
         });
+        $(document).ready(function () {
+            var btn = $('#btn-submit');
+            $(document).on('submit', 'form', function () {
+                btn.text("Enrolling please wait...");
+                $('button').attr('disabled', 'disabled');
 
+            });
+        });
     </script>
 
 @endsection

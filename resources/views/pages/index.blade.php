@@ -4,7 +4,7 @@
     <div class="container-fluid p-0 mb-5">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="{{asset('assets/img/gallery/carousal-1.webp')}}" alt="">
+                <img class="img-fluid" src="{{asset('assets/img/hero/h1_hero.png')}}" alt="carousal second images">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                      style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
@@ -12,41 +12,44 @@
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-white text-uppercase mb-3 animated slideInDown">Best Online
                                     Courses</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Global E-commerce Business</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Expand your e-commerce presence globally and drive
-                                    your business toward unprecedented growth</p>
-                                <a href="{{route('pages.about')}}"
+                                <h1 class="display-3 text-white animated slideInDown">Online and On-site learning</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Learn the top income generating courses with
+                                    Ecomgladiators</p>
+                                <a href="{{route('pages.courses')}}"
                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
                                     More</a>
-                                <a href="" aria-expanded="false"
-                                   data-bs-toggle="modal" data-bs-target="#get-quote" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get a Quote!</a>
+                                <a href="{{route('pages.enrollment')}}" aria-expanded="false"
+                                   class="btn btn-light py-md-3 px-md-5 animated slideInRight">Enroll Now!</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="{{asset('assets/img/gallery/carousal-1.webp')}}" alt="">
+                <img class="img-fluid" src="{{asset('assets/img/gallery/carousal-1.webp')}}"
+                     alt="carousal first image ">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                      style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Best Online
-                                    Courses</h5>
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">We empower
+                                    Entrepreneurs</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Global E-commerce Business</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Expand your e-commerce presence globally and drive
                                     your business toward unprecedented growth</p>
-                                <a href="{{route('pages.about')}}"
+                                <a href="{{route('pages.services')}}"
                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
                                     More</a>
                                 <a href="" aria-expanded="false"
-                                   data-bs-toggle="modal" data-bs-target="#get-quote" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get a Quote!</a>
+                                   data-bs-toggle="modal" data-bs-target="#get-quote"
+                                   class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get a Quote!</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <div class="container-xxl py-5">
@@ -95,6 +98,8 @@
             </div>
         </div>
     </div>
+
+
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
@@ -108,7 +113,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">Our Mission</h6>
                     <h1 class="mb-4">Welcome to Ecomgladiators</h1>
-                    <p class="mb-4">EcomGladiators empowers entrepreneurs, builds Amazon business to the next level, and
+                    <p class="mb-4" style="text-align: justify;">EcomGladiators empowers entrepreneurs, builds Amazon business to the next level, and
                         drives
                         better sales also help clients to navigate all challenges that USA and UK marketplaces throw at
                         them. EcomGladiators is
@@ -156,7 +161,7 @@
             </div>
             <?php
             $services =
-                ["AMAZON SELLER CENTRAL MANAGEMENT", "PL PRODUCT RESEARCH", "EXTENSIVE KEYWORD RESEARCH",
+                ["AMAZON SELLER CENTRAL MANAGEMENT", "PRIVATE LABEL PRODUCT RESEARCH", "EXTENSIVE KEYWORD RESEARCH",
                     "PRODUCT LISTING OPTIMIZATION", "ORDER PROCESSING AND TRACKING",
                     "WHOLESALE ACCOUNT APPROVAL", "WHOLESALE PRODUCT HUNTING", "INVENTORY MANAGEMENT"];
             ?>
@@ -323,7 +328,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="form-contact contact_form" id="enrollment_form" action="{{route('get-quote')}}" method="POST">
+                    <form class="form-contact contact_form" id="enrollment_form" action="{{route('get-quote')}}"
+                          method="POST">
                         @csrf
                         <div class="form-group">
 

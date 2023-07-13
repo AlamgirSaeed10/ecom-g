@@ -15,7 +15,8 @@
                 <div class="row">
                     <div class="col-lg-4 d-none d-md-none  d-lg-block">
                         <img
-                            src="https://blog-frontend.envato.com/cdn-cgi/image/width=1200,quality=85,format=auto/uploads/2022/04/E-commerce-App-JPG-File-scaled.jpg"
+
+                            src="{{asset('assets/img/gallery/delivery.jpg')}}"
                             width="100%" class="img-fluid"
                             alt="Global E-commerce Business">
                     </div>
@@ -179,12 +180,12 @@
         </div>
     </div>
     <div class="container-fluid bg-primary" style="margin-bottom: -50px">
-        <div class="container py-5">
-            <div class="d-flex justify-content-around align-items-center">
+        <div class="container py-3">
+            <div class="d-flex justify-content-between align-items-center">
                 <div class="custom-icon-div">
-                    <a href="" aria-expanded="false" class="btn btn-outline-light text-uppercase rounded-3 m-1"
+                    <a href="" aria-expanded="false" class="btn btn-success text-uppercase rounded-3 "
                        data-bs-toggle="modal" data-bs-target="#get-quote">
-                        <i class="bi bi-quote d-none d-lg-block"></i> Get A Quote
+                        <i class="bi bi-quote"></i> Get A Quote
                     </a>
                 </div>
                 <div class="d-none d-lg-block">
@@ -192,12 +193,11 @@
                     <p class="text-white">We provide free consultation so let's talk with us</p>
                 </div>
                 <div class="justify-content-between">
-                    <a class="btn btn-outline-secondary text-uppercase rounded-3" href="tel:+923190143276">Call for Free
+                    <a class="btn btn-outline-light text-uppercase rounded-3" href="tel:+923190143276">Call for Free
                         Consultation</a>
                 </div>
             </div>
         </div>
-
     </div>
     </div>
 

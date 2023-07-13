@@ -57,7 +57,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    <button class="btn btn-primary w-100 py-3" id="btn-submit" type="submit">Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -71,7 +71,6 @@
                     </div>
                     <div class="media contact-info">
                         <div class="media-body">
-{{--                            <a href="tel:+923190143276"><h5><i class="bi bi-phone"></i>+92 319 0143276</h5></a>--}}
                             <h6><i class="bi bi-clock"></i> Office Timing</h6>
                             <p>Mon to Fri<br>10:00AM - 5:00PM (Onsite)<br>09:00PM - 3:00AM (Online)</p>
                         </div>
@@ -101,5 +100,15 @@
                 counter.textContent = textarea.value.length + "/200";
             });
         });
+            $(document).ready(function() {
+                var btn = $('#btn-submit');
+            $(document).on('submit', 'form', function() {
+                btn.text("Sending message please wait...");
+                $('button').attr('disabled', 'disabled');
+
+            });
+        });
+
+
     </script>
 @endsection

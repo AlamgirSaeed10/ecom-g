@@ -53,14 +53,14 @@ class EcomController extends Controller
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'muhammadalamgir10@gmail.com';
-            $mail->Password = 'znensgwmxpgeflzi';
+            $mail->Username = 'info.ecomgladiators@gmail.com';
+            $mail->Password = 'ldgmdqxwachhqqqi';
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
             $mail->setFrom($data['email'], $data['name']);
 
-            $mail->addAddress("muhammadalamgir10@gmail.com",$data['name']);
+            $mail->addAddress("info.ecomgladiators@gmail.com",$data['name']);
             $mail->Subject = 'Contact us Form Query From ' . $request->name;
             $mail->Body .= "Name : " . $data['name'] . "<br>";
             $mail->Body .= "Email : " . $data['email'] . "<br>";
@@ -111,14 +111,12 @@ class EcomController extends Controller
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'muhammadalamgir10@gmail.com';
-            $mail->Password = 'znensgwmxpgeflzi';
+            $mail->Username = 'info.ecomgladiators@gmail.com';
+            $mail->Password = 'ldgmdqxwachhqqqi';
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
-
-            $mail->setFrom('admission@ecomgladiators.com', 'Ecom Gladiators');
-
-            $mail->addAddress("muhammadalamgir10@gmail.com",$request->cname);
+            $mail->setFrom('info.ecomgladiators@gmail.com', 'Ecom Gladiators');
+            $mail->addAddress("info.ecomgladiators@gmail.com",$request->cname);
             $mail->Subject = 'Request for Quotetaion from ' . $request->cname;
 
             $mail->Body  = "Name: {$data['cname']}<br>";
