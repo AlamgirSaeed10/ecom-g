@@ -12,16 +12,22 @@
                         <h4 class="title">What you will learn</h4>
                         <div class="content">
                             <ul>
-    <li>Build a home-based business that can replace your 9 to 5 job</li>
-    <li>Create a winning proposal that ensures you land high-paying, long-term clients to achieve freelance success</li>
-    <li>Build a long-term relationship with clients to earn recurring income from your freelance business</li>
-    <li>Benefits of using ChatGPT for freelancing</li>
-    <li>Best practices for freelancing on Upwork and Fiverr</li>
-    <li>Set up your payment method to make serious money on freelancing Fiverr</li>
-    <li>Build a big freelancing business by hiring other freelancers</li>
-    <li>Optimize your online presence and offerings to attract high-paying clients and increase project success rates, resulting in higher revenue</li>
-    <li>Improve communication skills to convince the client</li>
-    <li>Tips & tricks to improve productivity, success, and growth</li>
+                                <li>Build a home-based business that can replace your 9 to 5 job</li>
+                                <li>Create a winning proposal that ensures you land high-paying, long-term clients to
+                                    achieve freelance success
+                                </li>
+                                <li>Build a long-term relationship with clients to earn recurring income from your
+                                    freelance business
+                                </li>
+                                <li>Benefits of using ChatGPT for freelancing</li>
+                                <li>Best practices for freelancing on Upwork and Fiverr</li>
+                                <li>Set up your payment method to make serious money on freelancing Fiverr</li>
+                                <li>Build a big freelancing business by hiring other freelancers</li>
+                                <li>Optimize your online presence and offerings to attract high-paying clients and
+                                    increase project success rates, resulting in higher revenue
+                                </li>
+                                <li>Improve communication skills to convince the client</li>
+                                <li>Tips & tricks to improve productivity, success, and growth</li>
                             </ul>
 
                         </div>
@@ -31,12 +37,14 @@
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne"
                                                 aria-expanded="true" aria-controls="collapseOne">
                                             Module 1: Introduction to Freelancing
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                         aria-labelledby="headingOne"
                                          data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <ol>
@@ -51,12 +59,15 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseTwo" aria-expanded="false"
+                                                aria-controls="collapseTwo">
                                             Module 2: Creating a Winning Profile
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                         aria-labelledby="headingTwo"
                                          data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <ol>
@@ -73,12 +84,15 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseThree" aria-expanded="false"
+                                                aria-controls="collapseThree">
                                             Module 3: Creating an Irresistible Gig/portfolio/Service Offer
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                         aria-labelledby="headingThree"
                                          data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <ol>
@@ -94,12 +108,15 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseFour" aria-expanded="false"
+                                                aria-controls="collapseFour">
                                             Module 4: Maintain your Reputation
                                         </button>
                                     </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                         aria-labelledby="headingFour"
                                          data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <ol>
@@ -117,19 +134,20 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFive">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseFive" aria-expanded="false"
+                                                aria-controls="collapseFive">
                                             Module 5: Proposal Writing and Bidding Strategies
                                         </button>
                                     </h2>
-                                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                         aria-labelledby="headingFive"
                                          data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <ol>
                                                 <li>Writing persuasive proposals that win clients</li>
-                                                <li>Customizing proposals to match client needs</
-
-                                                li>
+                                                <li>Customizing proposals to match client needs</li>
                                                 <li>Pricing and negotiation techniques</li>
                                                 <li>Responding to client inquiries and feedback</li>
                                             </ol>
@@ -138,12 +156,15 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingSix">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseSix" aria-expanded="false"
+                                                aria-controls="collapseSix">
                                             Module 6: Scaling Your Freelance Business
                                         </button>
                                     </h2>
-                                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                    <div id="collapseSix" class="accordion-collapse collapse"
+                                         aria-labelledby="headingSix"
                                          data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <ol>
@@ -170,7 +191,7 @@
                         <li>
                             <a class="justify-content-between d-flex" href="#">
                                 <p>Trainer’s Name</p>
-                                <span class="or">Ayesha Naveed</span>
+                                <span class="or">Abrar Ahmed</span>
                             </a>
                         </li>
                         <li>
@@ -192,7 +213,8 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="{{route('pages.enrollment')}}" class="btn btn-primary text-uppercase enroll rounded-0 text-white">Enroll the
+                    <a href="{{route('pages.enrollment')}}"
+                       class="btn btn-primary text-uppercase enroll rounded-0 text-white">Enroll the
                         course</a>
 
                     <h4 class="title">Reviews</h4>
