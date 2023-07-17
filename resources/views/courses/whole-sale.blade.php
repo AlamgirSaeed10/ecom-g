@@ -29,6 +29,7 @@
 
                         </div>
 
+
                         <h4 class="title">Course Outline</h4>
                         <div class="container mt-3">
                             <div class="accordion" id="accordionExample">
@@ -233,7 +234,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
                                         <button class="accordion-button collapsed" type="button"
@@ -390,8 +390,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -407,18 +405,31 @@
                                 <span class="or">Ammar Haider</span>
                             </a>
                         </li>
+
+
                         <li>
                             <a class="justify-content-between d-flex" href="#">
                                 <p>Course Fee </p>
-                                <span>$230</span>
+                                <span>PKR 25,000 /-</span>
                             </a>
                         </li>
+
                         <li>
-                            <a class="justify-content-between d-flex" href="#">
-                                <p>Available Seats </p>
-                                <span>15</span>
-                            </a>
+                            <div class="dropdown">
+                                <a class=" justify-content-between d-flex" href="#" role="button"
+                                   id="availabilityDropdown"
+                                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                   onclick="toggleAvailability()">
+                                    <p>Available Seats</p>
+                                    <i class="bi-chevron-down"></i>
+                                </a>
+                            </div>
+                            <div class="p-3" id="availabilityDiv" style="display: none;">
+                                <h6 class="p-1">Online<p class="float-end">10</p></h6>
+                                <h6 class="p-1">OnSite<p class="float-end">10</p></h6>
+                            </div>
                         </li>
+
                         <li>
                             <a class="justify-content-between d-flex" href="#">
                                 <p>Schedule </p>
@@ -426,7 +437,10 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="{{route('pages.enrollment')}}" class="btn btn-primary text-uppercase enroll rounded-0 text-white">Enroll the
+
+
+                    <a href="{{route('pages.enrollment')}}"
+                       class="btn btn-primary text-uppercase enroll rounded-0 text-white">Enroll the
                         course</a>
 
                     <h4 class="title">Reviews</h4>
@@ -533,8 +547,32 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
+
+    <script>
+        const accordionItems = document.querySelectorAll(".accordion-item");
+
+        accordionItems.forEach((item) => {
+            const header = item.querySelector(".accordion-header button");
+            header.addEventListener("click", () => {
+                item.classList.toggle("show");
+
+                if (item.classList.contains("show")) {
+                    const content = item.querySelector(".accordion-collapse");
+                    const contentHeight = content.scrollHeight;
+                    content.style.height = contentHeight + "px";
+                } else {
+                    item.querySelector(".accordion-collapse").style.height = 0;
+                }
+            });
+        });
+
+        function toggleAvailability() {
+            var availabilityDiv = document.getElementById('availabilityDiv');
+            availabilityDiv.style.display = (availabilityDiv.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
 @endsection

@@ -37,11 +37,11 @@ Route::post('get-quote', [EcomController::class, 'get_quote'])->name('get-quote'
 /*          COURSES PAGES                */
 /*=======================================*/
 
-Route::get('whole-sale',[CoursesController::class,'whole_sale'])->name('courses.whole-sale');
-Route::get('private-label',[CoursesController::class,'private_label'])->name('courses.private-label');
-Route::get('digital-marketing',[CoursesController::class,'digital_marketing'])->name('courses.digital-marketing');
+Route::get('wholesale',[CoursesController::class,'whole_sale'])->name('courses.whole-sale');
+Route::get('privatelabel',[CoursesController::class,'private_label'])->name('courses.private-label');
+Route::get('digitalmarketing',[CoursesController::class,'digital_marketing'])->name('courses.digital-marketing');
 Route::get('freelancing',[CoursesController::class,'freelancing'])->name('courses.freelancing');
-Route::get('online-arbitrage',[CoursesController::class,'online_arbitrage'])->name('courses.online-arbitrage');
+Route::get('onlinearbitrage',[CoursesController::class,'online_arbitrage'])->name('courses.online-arbitrage');
 
 
 

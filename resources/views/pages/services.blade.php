@@ -1,6 +1,10 @@
 @extends('includes.master')
 @section('title', $title)
 @section('content')
+    <head>
+        <link rel="stylesheet" href="{{asset('assets/css/tm-swiper-bundle.min.css')}}"/>
+        <link rel="stylesheet" href="{{asset('assets/css/tm-style.css')}}"/>
+    </head>
     <div class="container-xxl mt-5">
         <div class="container">
 
@@ -179,6 +183,70 @@
 
         </div>
     </div>
+    <div class="container-xxl py-5 wow fadeInUp text-center visually-hidden" data-wow-delay="0.1s"
+         style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+        <div class="container">
+            <div class="testimonial mySwiper">
+                <div class="testi-content swiper-wrapper">
+                    <div class="slide swiper-slide">
+                        <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="" class="image"/>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                            saepe provident dolorem a quaerat quo error facere nihil deleniti
+                            eligendi ipsum adipisci, fugit, architecto amet asperiores
+                            doloremque deserunt eum nemo.
+                        </p>
+
+                        <i class="bx bxs-quote-alt-left tm-quote-icon"><a
+                                href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>
+
+
+                        <div class="details">
+                            <span class="name">Marnie Lotter</span>
+                            <span class="job">Web Developer</span>
+                        </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="" class="image"/>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                            saepe provident dolorem a quaerat quo error facere nihil deleniti
+                            eligendi ipsum adipisci, fugit, architecto amet asperiores
+                            doloremque deserunt eum nemo.
+                        </p>
+
+                        <i class="bx bxs-quote-alt-left tm-quote-icon"><a
+                                href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>
+
+                        <div class="details">
+                            <span class="name">Marnie Lotter</span>
+                            <span class="job">Web Developer</span>
+                        </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="" class="image"/>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                            saepe provident dolorem a quaerat quo error facere nihil deleniti
+                            eligendi ipsum adipisci, fugit, architecto amet asperiores
+                            doloremque deserunt eum nemo.
+                        </p>
+
+                        <i class="bx bxs-quote-alt-left tm-quote-icon"><a
+                                href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>
+
+                        <div class="details">
+                            <span class="name">Marnie Lotter</span>
+                            <span class="job">Web Developer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next nav-btn"></div>
+                <div class="swiper-button-prev nav-btn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid bg-primary" style="margin-bottom: -50px">
         <div class="container py-3">
             <div class="d-flex justify-content-between align-items-center">
@@ -199,12 +267,6 @@
             </div>
         </div>
     </div>
-    </div>
-
-
-
-
-
 
     <div class="modal fade" id="get-quote" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
          aria-hidden="true">
@@ -288,5 +350,20 @@
             </div>
         </div>
     </div>
-
+    <script src="{{asset('assets/js/tm-swiper-bundle.min.js')}}"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            grabCursor: true,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 @endsection

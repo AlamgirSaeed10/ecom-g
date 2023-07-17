@@ -1,3 +1,4 @@
+@php use Illuminate\Support\Facades\DB; @endphp
 @extends('includes.master')
 @section('title',$title)
 @section('content')
@@ -73,7 +74,7 @@
                                             <ol>
                                                 <li>Writing an engaging and professional bio</li>
                                                 <li>Showcasing relevant skills and expertise</li>
-                                                <li>Optimizing keywords for searchability</li>
+                                                <li>Optimizing keywords for search-ability</li>
                                                 <li>Understanding the user interface of platforms</li>
                                                 <li>Exploring available features and tools</li>
                                                 <li>Managing your dashboard and notifications</li>
@@ -282,7 +283,7 @@
                             <div class="comments-area mb-30">
 
                                 @php
-                                    $feedback = \Illuminate\Support\Facades\DB::table('course_feedback')->where('FeedbackStatus','1')->OrderBy('FeedbackID','DESC')->get();
+                                    $feedback = DB::table('course_feedback')->where('FeedbackStatus','1')->OrderBy('FeedbackID','DESC')->get();
                                 @endphp
                                 @foreach($feedback as $key => $value)
                                     @php
