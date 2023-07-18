@@ -62,6 +62,8 @@
 
         </div>
     </div>
+
+
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-4">
@@ -163,77 +165,99 @@
         </div>
     </div>
 
-
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
+                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
-                <h1 class="mb-5">Explore Top Subjects</h1>
+                <h4 class="mb-5">Unlock Your Potential: Top-Quality Courses that Fuel Brilliance!</h4>
             </div>
 
-            <!-- Carousal for mobile devices -->
-            <div class="col-12 d-md-none">
-                <div id="carouselCourses" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        @foreach($services as $key => $value)
-                            <div class="carousel-item @if($key === 0) active @endif">
-                                <div class="course-item bg-light">
-                                    <div class="position-relative overflow-hidden">
-                                        <img class="img-fluid"
-                                             src="{{asset('assets/img/gallery/topic')}}{{++$key}}{{'.png'}}"
-                                             alt="{{$value}}"
-                                             title="{{$value}}">
-                                    </div>
-                                    <div class="text-center p-4 pb-2">
-                                        <div class="topic-content">
-                                            <a href="" aria-expanded="false" data-bs-toggle="modal"
-                                               data-bs-target="#{{$modal[--$key]}}"><h6 class="mb-4">
-                                                {{$value}}
-                                            </h6></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                    <a class="carousel-control-prev text-dark" href="#carouselCourses" role="button" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </a>
-                    <a class="carousel-control-next text-dark" href="#carouselCourses" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Cards for desktop -->
-            <div class="justify-content-center d-none d-md-block">
-                <div class="row">
-                @foreach($services as $key => $value)
-
-                    <div class="col-lg-3 col-md-6 wow fadeInUp mb-5" data-wow-delay="0.3s">
-                        <div class="course-item bg-light">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid" src="{{asset('assets/img/gallery/topic')}}{{++$key}}{{'.png'}}"
-                                     alt="{{$value}}"
-                                     title="{{$value}}">
-                            </div>
-                            <div class="text-center p-4 pb-2">
-                                <div class="topic-content">
-                                    <a href="" aria-expanded="false" data-bs-toggle="modal"
-                                       data-bs-target="#{{$modal[--$key]}}"><h6 class="mb-4">
-                                        {{$value}}
-                                    </h6></a>
-                                </div>
-                            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"
+                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="http://127.0.0.1:8000/assets/img/gallery/topic1.png"
+                                 alt=" Wholesale" title=" Wholesale">
+                        </div>
+                        <div class="text-center p-4 pb-2">
+                            <h5 class="mb-4"> Wholesale</h5>
+                            <p class="description">
+                                A complete walkthrough of the Wholesale FBA model with the latest techniques. There will
+                                be two main methods ‘Direct’ &amp; ‘Reverse’ in which leads generation, sourcing,
+                                account creation, contact distributors via email &amp; call, Catalog Scanning, reseller
+                                permit, product hunting, tools analysis, shipment plan, 3PL, and Seller Central will be
+                                taught.
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <a href="http://127.0.0.1:8000/wholesale" class="btn btn-outline-primary mb-3">Course
+                                Outline</a>
                         </div>
                     </div>
-                @endforeach
                 </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"
+                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="http://127.0.0.1:8000/assets/img/gallery/topic2.png"
+                                 alt=" Private Label Outline" title=" Private Label Outline">
+                        </div>
+                        <div class="text-center p-4 pb-2">
+                            <h5 class="mb-4"> Private Label Outline</h5>
+                            <p class="description">
+                                A complete walkthrough of the Private Label FBA model. There will be an immense list of
+                                instructions that will be taught to qualify the product for a bigger investment. The key
+                                terms will revolve around Product Research through different tools as well as Manual
+                                Hunting, Competitor Analysis, Sourcing from Alibaba, Product Inspection and Feasibility,
+                                Patent Check, Listing Optimization, and PPC campaigns.
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <a href="http://127.0.0.1:8000/privatelabel" class="btn btn-outline-primary mb-3">Course
+                                Outline</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"
+                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="http://127.0.0.1:8000/assets/img/gallery/topic3.png"
+                                 alt=" Digital Marketing" title=" Digital Marketing">
+                        </div>
+                        <div class="text-center p-4 pb-2">
+                            <h5 class="mb-4"> Digital Marketing</h5>
+                            <p class="description">
+                                Every business needs digital marketing so we have brought an exciting course outline for
+                                this skill. The main focus will be on increasing organic traffic and boosting sales. A
+                                graphics designing skill is necessary to ease the process of marketing so how to
+                                convince the client using infographics will mainly be taught in this additional skill
+                                set.
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <a href="http://127.0.0.1:8000/digitalmarketing" class="btn btn-outline-primary mb-3">Course
+                                Outline</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
 
 
     <div class="container py-5">
@@ -416,7 +440,79 @@
             </a>
         </div>
     </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Top Subjects</h6>
+                <h1 class="mb-5">Explore Top Subjects</h1>
+            </div>
 
+            <!-- Carousal for mobile devices -->
+            <div class="col-12 d-md-none">
+                <div id="carouselCourses" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach($services as $key => $value)
+                            <div class="carousel-item @if($key === 0) active @endif">
+                                <div class="course-item bg-light">
+                                    <div class="position-relative overflow-hidden">
+                                        <img class="img-fluid" src="{{asset('assets/img/gallery/featured')}}{{++$key}}{{'.png'}}"
+                                             alt="{{$value}}" title="{{$value}}">
+                                    </div>
+                                    <div class="text-center p-4 pb-2">
+                                        <div class="topic-content">
+                                            <a href="" aria-expanded="false" data-bs-toggle="modal"
+                                               data-bs-target="#{{$modal[--$key]}}"><h6 class="mb-4">
+                                                    {{$value}}
+                                                </h6></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                    <a class="carousel-control-prev text-dark" href="#carouselCourses" role="button"
+                       data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next text-dark" href="#carouselCourses" role="button"
+                       data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cards for desktop -->
+            <div class="justify-content-center d-none d-md-block">
+                <div class="row">
+                    @foreach($services as $key => $value)
+
+                        <div class="col-lg-3 col-md-6 wow fadeInUp mb-5" data-wow-delay="0.3s">
+                            <a href="" aria-expanded="false" data-bs-toggle="modal"
+                               data-bs-target="#{{$modal[$key]}}">
+                                <div class="course-item bg-light">
+                                    <div class="position-relative overflow-hidden">
+                                        <img class="img-fluid" src="{{asset('assets/img/gallery/featured')}}{{++$key}}{{'.png'}}"
+                                             alt="{{$value}}" title="{{$value}}">
+                                    </div>
+                                    <div class="text-center p-4 pb-2">
+                                        <div class="topic-content">
+                                            <h6 class="mb-4">
+                                                {{$value}}
+                                            </h6>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <div class="modal fade" id="get-quote" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"

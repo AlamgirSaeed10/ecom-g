@@ -6,22 +6,6 @@
         <link rel="stylesheet" href="{{asset('assets/css/tm-swiper-bundle.min.css')}}"/>
         <link rel="stylesheet" href="{{asset('assets/css/tm-style.css')}}"/>
 
-        <style>
-            .description {
-                display: -webkit-box;
-                -webkit-line-clamp: 5;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                text-align: justify;
-            }
-
-            .course-item-list {
-                list-style-type: circle;
-                text-align: start;
-            }
-        </style>
-
-
     </head>
     <div class="container-xxl py-5">
         <div class="container">
@@ -37,6 +21,7 @@
                     " Digital Marketing",
                     " Freelancing (Fiverr & Upwork)",
                     " Online Arbitrage",
+
                 ];
             $url = ["whole-sale", "private-label", 'digital-marketing', "freelancing", "online-arbitrage"];
             $json = file_get_contents(storage_path('description.json'));
@@ -48,7 +33,7 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="course-item bg-light">
                             <div class="position-relative overflow-hidden">
-                                <img class="img-fluid" src="{{asset('assets/img/gallery/topic')}}{{++$key}}{{'.png'}}"
+                                <img class="img-fluid" src="{{asset('assets/img/gallery/featured')}}{{++$key}}{{'.png'}}"
                                      alt="{{$value}}" title="{{$value}}">
                             </div>
                             <div class="text-center p-4 pb-2">
@@ -140,8 +125,8 @@
                             <div class="topic-footer p-3">
                                 <a href="{{ route('pages.enrollment') }}" class="btn btn-outline-dark">Enroll Now</a>
                             </div>
-                            <a href="#" class="overseas_price text-primary">Price for Overseas/Pakistani</a>
-                            <a href="#" class="local_price text-primary d-none">Price for Local/Pakistani</a>
+                            <a href="#" class="overseas_price text-primary">Price for Overseas</a>
+                            <a href="#" class="local_price text-primary d-none">Price for Pakistanis</a>
                         </div>
                     </div>
                 </div>
@@ -170,8 +155,8 @@
                             <div class="topic-footer p-3">
                                 <a href="{{ route('pages.enrollment') }}" class="btn btn-outline-dark">Enroll Now</a>
                             </div>
-                            <a href="#" class="overseas_price text-primary">Price for Overseas/Pakistani</a>
-                            <a href="#" class="local_price text-primary d-none">Price for Local/pakistani</a>
+                            <a href="#" class="overseas_price text-primary">Price for Overseas</a>
+                            <a href="#" class="local_price text-primary d-none">Price for Pakistanis</a>
                         </div>
                     </div>
                 </div>
@@ -203,8 +188,8 @@
                             <div class="topic-footer p-3">
                                 <a href="{{ route('pages.enrollment') }}" class="btn btn-outline-dark">Enroll Now</a>
                             </div>
-                            <a href="#" class="overseas_price text-primary">Price for Overseas/Pakistani</a>
-                            <a href="#" class="local_price text-primary d-none">Price for Local/pakistani</a>
+                            <a href="#" class="overseas_price text-primary">Price for Overseas</a>
+                            <a href="#" class="local_price text-primary d-none">Price for Pakistanis</a>
                         </div>
                     </div>
                 </div>
@@ -212,7 +197,7 @@
             <div class="col-xl-12">
                 <p class="text-primary mb-0">
                     <strong>Note:</strong> EcomGladiators provide a certificate only after
-                    the candidate passes the assessment</p>
+                    the candidate passes the assessment.</p>
             </div>
         </div>
     </div>
@@ -315,7 +300,7 @@
             if (topic_title === 'Starter') {
                 $(this).parent().find('.topic-price h4').text('$150');
             } else if (topic_title === 'Combination') {
-                $(this).parent().find('.topic-price h4').html('$250 (<del>$200</del>)');
+                $(this).parent().find('.topic-price h4').html('$200 (<del>$250</del>)');
             } else {
                 $(this).parent().find('.topic-price h4').html('$500 (<del>$750</del>)');
             }

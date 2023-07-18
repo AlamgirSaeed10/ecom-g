@@ -43,7 +43,7 @@ class EnrollmentController extends Controller
 
         if ($en_data['PlanID'] === '2' && count($request->course_selected) < 2) {
             return redirect()->back()->with('error', 'Please select a second course');
-        }else{
+        }
 
         $invoiceNo = Str::replaceFirst('STU', 'INV', $request->StudentID);
         $plan = DB::table('course_plan')->where('PlanID', $request->PlanID)->get();
@@ -61,7 +61,6 @@ class EnrollmentController extends Controller
         if (count($enroll_cnic) > 0) {
             return redirect()->route('pages.enrollment')->with('error', 'Student already registered with this CNIC.');
         }
-
 
         if (count($en_data) > 0 && count($inv_data) > 0) {
 
@@ -107,7 +106,6 @@ class EnrollmentController extends Controller
                 return redirect()->back()->with('success', 'Email could not be sent. Error: ', $mail->ErrorInfo);
             }
             }
-        }
         return redirect()->back()->with('success', 'Our team will contact you shortly... Please be patient.');
     }
 }

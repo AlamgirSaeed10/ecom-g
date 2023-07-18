@@ -432,8 +432,8 @@
 
                         <li>
                             <a class="justify-content-between d-flex" href="#">
-                                <p>Schedule </p>
-                                <span>2.00 pm to 4.00 pm</span>
+                                <p>Course Duration </p>
+                                <span>1 Month (Avg.)</span>
                             </a>
                         </li>
                     </ul>
@@ -451,33 +451,33 @@
                                 <div class="d-flex flex-row reviews justify-content-between">
                                     <span>Quality</span>
                                     <div class="star">
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star-fill checked"></i>
+                                        <i class="bi bi-star-fill checked"></i>
+                                        <i class="bi bi-star-fill checked"></i>
+                                        <i class="bi bi-star-fill checked"></i>
+                                        <i class="bi bi-star-fill checked"></i>
                                     </div>
                                     <span>Outstanding</span>
                                 </div>
                                 <div class="d-flex flex-row reviews justify-content-between">
                                     <span>Punctuality</span>
                                     <div class="star">
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star"></i>
-                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star-fill checked"></i>
+                                        <i class="bi bi-star-fill checked"></i>
+                                        <i class="bi bi-star-fill checked"></i>
+                                        <i class="bi bi-star-fill checked"></i>
+                                        <i class="bi bi-star-fill checked"></i>
                                     </div>
                                     <span>Outstanding</span>
                                 </div>
                                 <div class="d-flex flex-row reviews justify-content-between">
                                     <span>Quality</span>
                                     <div class="star">
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star"></i>
-                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star-fill checked"></i>
+                                        <i class="bi bi-star-fill checked"></i>
+                                        <i class="bi bi-star-fill checked"></i>
+                                        <i class="bi bi-star-fill checked"></i>
+                                        <i class="bi bi-star-fill checked"></i>
                                     </div>
                                     <span>Outstanding</span>
                                 </div>
