@@ -2,12 +2,69 @@
 @extends('includes.master')
 @section('title',$title)
 @section('content')
+    <style>
+    p.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-bottom:10px;
+}
+
+/* Add a background color to the accordion if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+p.accordion.active, p.accordion:hover {
+    background-color: #ddd;
+}
+
+/* Unicode character for "plus" sign (+) */
+p.accordion:after {
+    content: '\2795'; 
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+/* Unicode character for "minus" sign (-) */
+p.accordion.active:after {
+    content: "\2796"; 
+}
+
+/* Style the element that is used for the panel class */
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+    margin-bottom:10px;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 9999px;
+}
+</style>
+
+
     <section class="course_details_area section_gap">
         <div class="container">
             <div class="row">
+                @if(Session::has('success'))
+                        <div class="alert alert-success">
+                            {{Session::get('success')}}
+                        </div>
+                    @endif
                 <div class="col-lg-8 course_details_left">
                     <div class="main_image">
-                        <img class="img-fluid" src="{{asset('assets/img/course-details.jpg')}}" alt="">
+                        <img class="img-fluid" src="{{asset('assets/img/gallery/featured4.webp')}}" alt="">
                     </div>
                     <div class="content_wrapper">
                         <h4 class="title">What you will learn</h4>
@@ -32,46 +89,24 @@
                             </ul>
 
                         </div>
-
-                        <h4 class="title">Course Outline</h4>
-                        <div class="container mt-3">
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseOne"
-                                                aria-expanded="true" aria-controls="collapseOne">
-                                            Module 1: Introduction to Freelancing
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
-                                         aria-labelledby="headingOne"
-                                         data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <ol>
+     <h4 class="title">Course Outline</h4>
+                        <div class="accordion-container">
+                            
+                            <p class="accordion"> Module 1: Introduction to Freelancing</p>
+                            <div class="panel">
+                                <ol>
                                                 <li>Understanding the freelancing industry</li>
                                                 <li>Overview of Upwork and Fiverr platforms</li>
                                                 <li>Challenges of freelancing</li>
                                                 <li>Freelancing as a Source of income</li>
                                                 <li>AI-powered Tools to build your Business</li>
                                             </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#collapseTwo" aria-expanded="false"
-                                                aria-controls="collapseTwo">
-                                            Module 2: Creating a Winning Profile
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                         aria-labelledby="headingTwo"
-                                         data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <ol>
+                            </div>
+                           
+                           
+                            <p class="accordion"> Module 2: Creating a Winning Profile</p>
+                            <div class="panel">
+                                 <ol>
                                                 <li>Writing an engaging and professional bio</li>
                                                 <li>Showcasing relevant skills and expertise</li>
                                                 <li>Optimizing keywords for search-ability</li>
@@ -80,23 +115,11 @@
                                                 <li>Managing your dashboard and notifications</li>
                                                 <li>Set up a payment system</li>
                                             </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#collapseThree" aria-expanded="false"
-                                                aria-controls="collapseThree">
-                                            Module 3: Creating an Irresistible Gig/portfolio/Service Offer
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                         aria-labelledby="headingThree"
-                                         data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <ol>
+                            </div>
+                            
+                            <p class="accordion"> Module 3: Creating an Irresistible Gig/portfolio/Service Offer</p>
+                            <div class="panel">
+                                <ol>
                                                 <li>Structuring your service effectively</li>
                                                 <li>Writing a concise and convincing description</li>
                                                 <li>Setting competitive pricing strategies</li>
@@ -104,23 +127,12 @@
                                                 <li>Create a robust online presence</li>
                                                 <li>Leveraging additional service options and extras</li>
                                             </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#collapseFour" aria-expanded="false"
-                                                aria-controls="collapseFour">
-                                            Module 4: Maintain your Reputation
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse"
-                                         aria-labelledby="headingFour"
-                                         data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <ol>
+                            </div>
+                            
+                            <p class="accordion">  Module 4: Maintain your Reputation</p>
+                            <div class="panel">
+                                
+                                  <ol>
                                                 <li>Securing positive reviews</li>
                                                 <li>Providing exceptional customer service</li>
                                                 <li>Increase your response rate</li>
@@ -130,45 +142,12 @@
                                                 <li>Communication and collaboration with clients</li>
                                                 <li>Get featured on Upwork and Fiverr</li>
                                             </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFive">
-                                        <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#collapseFive" aria-expanded="false"
-                                                aria-controls="collapseFive">
-                                            Module 5: Proposal Writing and Bidding Strategies
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFive" class="accordion-collapse collapse"
-                                         aria-labelledby="headingFive"
-                                         data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <ol>
-                                                <li>Writing persuasive proposals that win clients</li>
-                                                <li>Customizing proposals to match client needs</li>
-                                                <li>Pricing and negotiation techniques</li>
-                                                <li>Responding to client inquiries and feedback</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingSix">
-                                        <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#collapseSix" aria-expanded="false"
-                                                aria-controls="collapseSix">
-                                            Module 6: Scaling Your Freelance Business
-                                        </button>
-                                    </h2>
-                                    <div id="collapseSix" class="accordion-collapse collapse"
-                                         aria-labelledby="headingSix"
-                                         data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <ol>
+                                
+                            </div>
+                            
+                            <p class="accordion">Module 6: Scaling Your Freelance Business</p>
+                            <div class="panel">
+                                <ol>
                                                 <li>Strategies for growing your freelancing business</li>
                                                 <li>Building a solid client base and repeat business</li>
                                                 <li>Hiring subcontractors or creating a team</li>
@@ -177,10 +156,22 @@
                                                 <li>Use social media to market your services</li>
                                                 <li>Interviews with successful freelancers</li>
                                             </ol>
-                                        </div>
-                                    </div>
-                                </div>
+                                            
                             </div>
+                            
+
+                            
+                        </div>
+                        
+                         <h4 class="title">Requirements</h4>
+                        <div class="content">
+                            <ul>
+                                <li>Prior freelance or job experience is optional to enroll in this course but not required. This course teaches you how to achieve freelance success from scratch.</li>
+                                <li>However, you need to know (or have an idea of) what freelance service you're going to offer.</li>
+                                <li>Essential equipment includes a computer/laptop, a reliable Internet connection, and recommended softwares like Excel, Google Docs, Spreadsheet, and Chrome.</li>
+                                <li>After all, you need just time and a willingness to learn to earn.</li>
+                            </ul>
+
                         </div>
                     </div>
 
@@ -198,19 +189,49 @@
                         <li>
                             <a class="justify-content-between d-flex" href="#">
                                 <p>Course Fee </p>
-                                <span>$230</span>
+                                <span>PKR 30,000 /- </span>
                             </a>
                         </li>
                         <li>
-                            <a class="justify-content-between d-flex" href="#">
-                                <p>Available Seats </p>
-                                <span>15</span>
-                            </a>
+                            <div class="dropdown">
+                                <a class=" justify-content-between d-flex" href="#" role="button" id="availabilityDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="toggleAvailability()">
+                                    <p>Available Seats</p>
+                                    <i class="bi-chevron-down"></i>
+                                </a>
+                            </div>
+                            <div class="p-3" id="availabilityDiv" style="display: none;">
+                                <h6 class="p-1">Online<p class="float-end">15</p></h6>
+                                <h6 class="p-1">OnSite<p class="float-end">10</p></h6>
+                            </div>
                         </li>
                         <li>
+                            <div class="dropdown">
+                                <a class=" justify-content-between d-flex" href="#" role="button" id="commencementDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="toggleCommecement()">
+                                    <p>Commencement of Training</p>
+                                    <i class="bi-chevron-down"></i>
+                                </a>
+                            </div>
+                            <div class="p-3" id="commencementDiv" style="display: none;">
+                                <h6 class="p-1">Online<p class="float-end">TBD</p></h6>
+                                <h6 class="p-1">OnSite<p class="float-end">Immediate</p></h6>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <a class=" justify-content-between d-flex" href="#" role="button" id="deadlineDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="toggleDeadline()">
+                                    <p>Enrollment Deadline</p>
+                                    <i class="bi-chevron-down"></i>
+                                </a>
+                            </div>
+                            <div class="p-3" id="deadlineDiv" style="display: none;">
+                                <h6 class="p-1">Online<p class="float-end">TBD</p></h6>
+                                <h6 class="p-1">OnSite<p class="float-end">Rolling Admissions</p></h6>
+                            </div>
+                        </li>
+                          <li>
                             <a class="justify-content-between d-flex" href="#">
-                                <p>Schedule </p>
-                                <span>2.00 pm to 4.00 pm</span>
+                                <p>Course Duration </p>
+                                <span>1 Month (Avg.)</span>
                             </a>
                         </li>
                     </ul>
@@ -222,48 +243,54 @@
                     <div class="content">
                         <div class="review-top row pt-40">
                             <div class="col-lg-12">
-                                <h6 class="mb-15">Provide Your Rating</h6>
-                                <div class="d-flex flex-row reviews justify-content-between">
-                                    <span>Quality</span>
-                                    <div class="star">
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
+                                <h6>Teaching style &amp; communication</h5>
+                                    <!--<div class="d-flex flex-row reviews justify-content-between">-->
+                                    <div class="star" style="float: right;">
                                         <i class="bi bi-star"></i>
-                                    </div>
-                                    <span>Outstanding</span>
-                                </div>
-                                <div class="d-flex flex-row reviews justify-content-between">
-                                    <span>Punctuality</span>
-                                    <div class="star">
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
                                         <i class="bi bi-star"></i>
                                         <i class="bi bi-star"></i>
                                     </div>
-                                    <span>Outstanding</span>
-                                </div>
-                                <div class="d-flex flex-row reviews justify-content-between">
-                                    <span>Quality</span>
-                                    <div class="star">
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
-                                        <i class="bi bi-star checked"></i>
+                                    <br>
+                                    <!--<span>Outstanding</span>-->
+                                <!--</div>-->
+                                    <h6>Relevance &amp; Content Quality</h6>
+                                    <!--<div class="d-flex flex-row reviews justify-content-between">-->
+                                    <div class="star" style="float: right;">
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
                                         <i class="bi bi-star"></i>
                                         <i class="bi bi-star"></i>
                                     </div>
-                                    <span>Outstanding</span>
-                                </div>
+                                    <!--<span>Outstanding</span>-->
+                                <!--</div>-->
+                                <br>
+                                    <h6>Responsiveness &amp; Support</h6>
+                                    <!--<div class="d-flex flex-row reviews justify-content-between">-->
+                                    <div class="star" style="float: right;">
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star"></i>
+                                    </div>
+                                    <!--<span>Outstanding</span>-->
+                                <!--</div>-->
                             </div>
                         </div>
                         <div class="feedeback">
                             <h6>Your Feedback</h6>
+                            <h7>Be the first to review your learning experience.</h7>
+                            
 
-                            <form action="" method="post">
+                           <form action="{{route('courses.feedback')}}" method="post">
+                                @csrf
                                 <div class="mb-2">
-                                    <input type="text" placeholder="Enter you Username" name="Username"
+                                                                        <input type="hidden" name="CourseCode" value="fl" required>
+
+                                    <input type="text" placeholder="Enter you Name" name="Username"
                                            class="form-control" id="" required>
                                 </div>
                                 <div class="mb-2">
@@ -283,7 +310,7 @@
                             <div class="comments-area mb-30">
 
                                 @php
-                                    $feedback = DB::table('course_feedback')->where('FeedbackStatus','1')->OrderBy('FeedbackID','DESC')->get();
+                                    $feedback = \Illuminate\Support\Facades\DB::table('course_feedback')->where('FeedbackStatus','1')->where('CourseCode','fl')->OrderBy('FeedbackID','DESC')->get();
                                 @endphp
                                 @foreach($feedback as $key => $value)
                                     @php
@@ -298,16 +325,16 @@
                                         <div class="single-comment single-reviews justify-content-between d-flex">
                                             <div class="user justify-content-between d-flex">
                                                 <div class="thumb p-4">
-                                                    <img src="{{asset('assets/img/team-4.jpg')}}" alt="" width="50">
+                                                    <img src="https://cdn-icons-png.flaticon.com/512/707/707675.png" alt="user testimonial icon" width="50">
                                                 </div>
                                                 <div class="desc">
                                                     <h5><a href="#">{{$value->Username}}</a>
                                                         <div class="star">
-                                                            <span class="bi bi-star checked"></span>
-                                                            <span class="bi bi-star checked"></span>
-                                                            <span class="bi bi-star checked"></span>
-                                                            <span class="bi bi-star"></span>
-                                                            <span class="bi bi-star"></span>
+                                                            <span class="bi bi-star-fill checked"></span>
+                                                            <span class="bi bi-star-fill checked"></span>
+                                                            <span class="bi bi-star-fill checked"></span>
+                                                            <span class="bi bi-star-fill checked"></span>
+                                                            <span class="bi bi-star-fill checked"></span>
                                                         </div>
                                                     </h5>
                                                     <p class="comment">
@@ -326,4 +353,28 @@
             </div>
         </div>
     </section>
+     <script>
+       function toggleAvailability() {
+            var availabilityDiv = document.getElementById('availabilityDiv');
+            availabilityDiv.style.display = (availabilityDiv.style.display === 'block') ? 'none' : 'block';
+        }
+        function toggleCommecement() {
+            var commencementDiv = document.getElementById('commencementDiv');
+            commencementDiv.style.display = (commencementDiv.style.display === 'block') ? 'none' : 'block';
+        }
+        function toggleDeadline() {
+            var deadlineDiv = document.getElementById('deadlineDiv');
+            deadlineDiv.style.display = (deadlineDiv.style.display === 'block') ? 'none' : 'block';
+        }
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+ acc[i].onclick = function(){
+ this.classList.toggle("active");
+ this.nextElementSibling.classList.toggle("show");
+};
+}
+
+    </script>
 @endsection

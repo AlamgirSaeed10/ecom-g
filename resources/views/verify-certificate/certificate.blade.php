@@ -1,10 +1,6 @@
 @extends('includes.master')
 @section('title',$title)
 @section('content')
-
-
-
-
     <section class="py-5 mt-100">
         <div class="container mt-5">
             <div class="row p-4">
@@ -17,10 +13,11 @@
                     @endif
                     <form action="{{route('pages.verify_certificate')}}" method="post" autocomplete="off">
                         @csrf
-                        <input class="form-control" name="CertificateNo" type="text" placeholder="Enter Certificate Number" required>
+                        <input class="form-control" name="CertificateNo" type="text"
+                               placeholder="Enter Certificate Number" required>
 
                         <div class="form-group mt-3 mb-3 float-end">
-                            <button type="submit" class="btn btn-outline-success" >Check Certificate</button>
+                            <button type="submit" class="btn btn-outline-success">Check Certificate</button>
                         </div>
                     </form>
 
@@ -28,7 +25,5 @@
             </div>
         </div>
     </section>
-
-
 
 @endsection

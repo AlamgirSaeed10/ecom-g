@@ -14,11 +14,19 @@ const part3 = "\n \t \t \t \t \t the assessment on ";
 
 const generatePDF = async (sname, cname, cdate,certUrl) => {
     const {PDFDocument, rgb} = PDFLib;
-    const exBytes = await fetch('/assets/img/cert/cert.pdf').then((res) => {
+    
+     const pdfUrl = 'https://www.ecomgladiators.com/public/assets/img/cert/cert.pdf';
+    const exBytes = await fetch(pdfUrl).then((res) => {
         return res.arrayBuffer();
     });
 
-    const exFont = await fetch('/assets/css/fonts/Poppins-medium.ttf').then((res) => {
+     const fontUrl = 'https://www.ecomgladiators.com/public/assets/css/fonts/Poppins-Medium.ttf';
+    const exFont = await fetch(fontUrl).then((res) => {
+        return res.arrayBuffer();
+    });
+    
+    const TitleFontUrl = 'https://www.ecomgladiators.com/public/assets/css/fonts/Poppins-Bold.ttf';
+    const TitleExFont = await fetch(TitleFontUrl).then((res) => {
         return res.arrayBuffer();
     });
 
@@ -30,6 +38,7 @@ const generatePDF = async (sname, cname, cdate,certUrl) => {
     
     pdfDoc.registerFontkit(fontkit)
     const myFont = await pdfDoc.embedFont(exFont);
+    const titleFont = await pdfDoc.embedFont(TitleExFont);
     const pages = pdfDoc.getPages();
     const StudentName = pages[0];
     const CourseName = pages[0];
@@ -39,12 +48,21 @@ const generatePDF = async (sname, cname, cdate,certUrl) => {
 
     const textSize = 35;
     const urlTextSize = 15;
+    
+    pdfDoc.setTitle('Ecomgladiators');
+    pdfDoc.setAuthor('Muhammad Ali');
+    pdfDoc.setSubject('Assessment Certificate');
+    pdfDoc.setKeywords(['ecommerce','certificate']);
+    pdfDoc.setProducer('Ammar Haider');
+    pdfDoc.setCreator('Muhammad Ali');
+  
+ 
 
     StudentName.drawText(sname, {
-        x: StudentName.getWidth() / 2 - myFont.widthOfTextAtSize(sname, textSize) / 2,
-        y: StudentName.getHeight() / 2 - myFont.heightAtSize(textSize) / 2 + 80,
+        x: StudentName.getWidth() / 2 - titleFont.widthOfTextAtSize(sname, textSize) / 2,
+        y: StudentName.getHeight() / 2 - titleFont.heightAtSize(textSize) / 2 + 80,
         size: textSize,
-        font: myFont,
+        font: titleFont,
     });
 
     CourseName.drawText(cname, {

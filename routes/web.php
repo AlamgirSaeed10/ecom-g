@@ -7,6 +7,9 @@ use App\Http\Controllers\EnrollmentController;
 use Illuminate\Support\Facades\Route;
 
 
+Route::get('/',[EcomController::class,'index'])->name('maintenance');
+
+
 Route::get('/',[EcomController::class,'index'])->name('pages.index');
 
 Route::get('about',[EcomController::class,'about'])->name('pages.about');
@@ -25,13 +28,14 @@ Route::get('verify-certificate',[CertificatesController::class,'certificate'])->
 Route::post('verify-certificate',[CertificatesController::class,'verify_certificate'])->name('pages.verify_certificate');
 Route::get('verify/{CertID}',[CertificatesController::class,'verify_certificate_online'])->name('pages.verify_certificate_online');
 
-
 Route::post('newsletter',[EcomController::class,'newsletter'])->name('pages.newsletter');
+
+Route::post('feedback',[EcomController::class,'feedback'])->name('courses.feedback');
 
 Route::get('sitemap',[EcomController::class,'sitemap'])->name('pages.sitemap');
 Route::get('privacy-policy',[EcomController::class,'privacy'])->name('pages.privacy-policy');
-
 Route::post('get-quote', [EcomController::class, 'get_quote'])->name('get-quote');
+
 
 /*=======================================*/
 /*          COURSES PAGES                */

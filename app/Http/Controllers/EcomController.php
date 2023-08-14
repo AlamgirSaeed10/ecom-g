@@ -9,6 +9,12 @@ use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 class EcomController extends Controller
 {
+    // public function index()
+    // {
+    //     $title = "We Empower Entrepreneurs";
+    //     return view('pages.maintenance', compact('title'));
+    // }
+    
     public function index()
     {
         $title = "We Empower Entrepreneurs";
@@ -92,6 +98,18 @@ class EcomController extends Controller
         DB::table('newsletter')->insert(['NewsletterEmail'=>$request->NewsletterEmail]);
         return redirect()->back()->with('success','You have subscribed successfully. Our team will contact you shortly');
     }
+
+    public function feedback(Request $request){
+        $Username = $request->Username;
+        $Email = $request->Email;
+        $Feedback = $request->Feedback;
+        $CourseCode = $request->CourseCode;
+        DB::table('course_feedback')->insert(
+            ['Username' =>$Username,'Email'=>$Email,'Message'=>$Feedback,'CourseCode'=>$CourseCode]);
+        return redirect()->back()->with('success','Thank you for your feedback');
+    }
+    
+    
 
     public function get_quote(Request $request)
     {

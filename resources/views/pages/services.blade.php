@@ -11,21 +11,19 @@
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
-                <h1 class="mb-5">Global E-commerce Business</h1>
+                <h4 class="mb-5">Transform your vision into reality with our comprehensive suite of professional services.</h4>
             </div>
 
             <div class="" style="text-align: justify;">
 
                 <div class="row">
                     <div class="col-lg-4 d-none d-md-none  d-lg-block">
-                        <img
-
-                            src="{{asset('assets/img/gallery/delivery.jpg')}}"
-                            width="100%" class="img-fluid"
-                            alt="Global E-commerce Business">
+                        <img src="{{asset('assets/img/gallery/service_start.webp')}}" width="100%" class="img-fluid" alt="Global E-commerce Business">
                     </div>
+                    
                     <div class="col-sm-12 col-md-12 col-lg-8 p-4">
-                        <p>Welcome to Ecomgladiators, your premier e-commerce service provider specializing in Amazon
+                        <!--<p style= float: left;></p>-->
+                        <p><strong>Global E-commerce Business</strong><br>Welcome to Ecomgladiators, your premier e-commerce service provider specializing in Amazon
                             wholesale
                             and private label business services.
                             With a focus on key marketplaces such as the USA, UK, Germany, Canada, UAE, Italy, and
@@ -51,11 +49,12 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row">
+                <div class="slider" style="max-width:1240px">
                 <div class="col-sm-12 col-md-4 col-lg-4">
                     <div class="card">
                         <div class="card-head">
                             <i class="bi bi-box-seam card-head-icon text-center" aria-expanded="false"></i>
-                            <h5>Wholesale Business</h5>
+                            <h5>Wholesale FBA Business</h5>
                         </div>
                         <div class="card-body text-start custom-hover">
                             <p><i class="bi bi-gem" aria-expanded="false"></i> Research Brands/Distributors</p>
@@ -150,7 +149,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-sm-12 col-md-4 col-lg-4">
                     <div class="card">
                         <div class="card-head">
@@ -180,73 +178,81 @@
                     </div>
                 </div>
             </div>
-
-        </div>
-    </div>
-    <div class="container-xxl py-5 wow fadeInUp text-center visually-hidden" data-wow-delay="0.1s"
-         style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-        <div class="container">
-            <div class="testimonial mySwiper">
-                <div class="testi-content swiper-wrapper">
-                    <div class="slide swiper-slide">
-                        <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="" class="image"/>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-                            saepe provident dolorem a quaerat quo error facere nihil deleniti
-                            eligendi ipsum adipisci, fugit, architecto amet asperiores
-                            doloremque deserunt eum nemo.
-                        </p>
-
-                        <i class="bx bxs-quote-alt-left tm-quote-icon"><a
-                                href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>
-
-
-                        <div class="details">
-                            <span class="name">Marnie Lotter</span>
-                            <span class="job">Web Developer</span>
-                        </div>
-                    </div>
-                    <div class="slide swiper-slide">
-                        <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="" class="image"/>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-                            saepe provident dolorem a quaerat quo error facere nihil deleniti
-                            eligendi ipsum adipisci, fugit, architecto amet asperiores
-                            doloremque deserunt eum nemo.
-                        </p>
-
-                        <i class="bx bxs-quote-alt-left tm-quote-icon"><a
-                                href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>
-
-                        <div class="details">
-                            <span class="name">Marnie Lotter</span>
-                            <span class="job">Web Developer</span>
-                        </div>
-                    </div>
-                    <div class="slide swiper-slide">
-                        <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="" class="image"/>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-                            saepe provident dolorem a quaerat quo error facere nihil deleniti
-                            eligendi ipsum adipisci, fugit, architecto amet asperiores
-                            doloremque deserunt eum nemo.
-                        </p>
-
-                        <i class="bx bxs-quote-alt-left tm-quote-icon"><a
-                                href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>
-
-                        <div class="details">
-                            <span class="name">Marnie Lotter</span>
-                            <span class="job">Web Developer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next nav-btn"></div>
-                <div class="swiper-button-prev nav-btn"></div>
-                <div class="swiper-pagination"></div>
             </div>
+
         </div>
     </div>
+    
+    
+    
+    <!--<div class="container-xxl py-5 wow fadeInUp text-center" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">-->
+    <!--    <div class="container">-->
+    <!--        <div class="testimonial mySwiper">-->
+    <!--            <div class="testi-content swiper-wrapper">-->
+    <!--                <div class="slide swiper-slide">-->
+    <!--                    <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="user testimonial image" class="image"/>-->
+    <!--                    <p>-->
+    <!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,-->
+    <!--                        saepe provident dolorem a quaerat quo error facere nihil deleniti-->
+    <!--                        eligendi ipsum adipisci, fugit, architecto amet asperiores-->
+    <!--                        doloremque deserunt eum nemo.-->
+    <!--                    </p>-->
+
+    <!--                    <i class="bx bxs-quote-alt-left tm-quote-icon"><a-->
+    <!--                            href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>-->
+
+
+    <!--                    <div class="details">-->
+    <!--                        <span class="name">Marnie Lotter</span>-->
+    <!--                        <span class="job">Web Developer</span>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="slide swiper-slide">-->
+    <!--                    <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="user testimonial image"  class="image"/>-->
+    <!--                    <p>-->
+    <!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,-->
+    <!--                        saepe provident dolorem a quaerat quo error facere nihil deleniti-->
+    <!--                        eligendi ipsum adipisci, fugit, architecto amet asperiores-->
+    <!--                        doloremque deserunt eum nemo.-->
+    <!--                    </p>-->
+
+    <!--                    <i class="bx bxs-quote-alt-left tm-quote-icon"><a-->
+    <!--                            href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>-->
+
+    <!--                    <div class="details">-->
+    <!--                        <span class="name">Marnie Lotter</span>-->
+    <!--                        <span class="job">Web Developer</span>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="slide swiper-slide">-->
+    <!--                    <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="user testimonial image"  class="image"/>-->
+    <!--                    <p>-->
+    <!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,-->
+    <!--                        saepe provident dolorem a quaerat quo error facere nihil deleniti-->
+    <!--                        eligendi ipsum adipisci, fugit, architecto amet asperiores-->
+    <!--                        doloremque deserunt eum nemo.-->
+    <!--                    </p>-->
+
+    <!--                    <i class="bx bxs-quote-alt-left tm-quote-icon"><a-->
+    <!--                            href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>-->
+
+    <!--                    <div class="details">-->
+    <!--                        <span class="name">Marnie Lotter</span>-->
+    <!--                        <span class="job">Web Developer</span>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="swiper-button-next nav-btn"></div>-->
+    <!--            <div class="swiper-button-prev nav-btn"></div>-->
+    <!--            <div class="swiper-pagination"></div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
+    
+    
+    
+    
+    
     <div class="container-fluid bg-primary" style="margin-bottom: -50px">
         <div class="container py-3">
             <div class="d-flex justify-content-between align-items-center">
@@ -257,19 +263,16 @@
                     </a>
                 </div>
                 <div class="d-none d-lg-block">
-                    <p class="text-white">Do you have any question about our services?</p>
-                    <p class="text-white">We provide free consultation so let's talk with us</p>
+                    <p class="text-white">Curious to know more about our services?</p>
+                    <p class="text-white">Take advantage of our free consultation, and let's discuss how we can assist you.</p>
                 </div>
                 <div class="justify-content-between">
-                    <a class="btn btn-outline-light text-uppercase rounded-3" href="tel:+923190143276">Call for Free
-                        Consultation</a>
+                    <a class="btn btn-outline-light text-uppercase rounded-3" href="tel:+923279942799">"Complimentary Consultation" <br> Call Now!</a>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="get-quote" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-         aria-hidden="true">
+    <div class="modal fade" id="get-quote" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -349,7 +352,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>  
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ 
     <script src="{{asset('assets/js/tm-swiper-bundle.min.js')}}"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -365,5 +372,34 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+       
+    jQuery(document).ready(function($) {
+      $('.slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        responsive: [{
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+           breakpoint: 400,
+           settings: {
+              arrows: false,
+              slidesToShow: 1,
+              slidesToScroll: 1
+           }
+        }]
+    });
+});
     </script>
+    
 @endsection

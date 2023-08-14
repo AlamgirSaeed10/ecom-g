@@ -6,7 +6,7 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
-                <h1 class="mb-5">Contact For Any Query</h1>
+                <h1 class="mb-5">Contact Us for Inquiries and Assistance!</h1>
             </div>
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12" style="height: 300px">
@@ -65,8 +65,10 @@
                 <div class="col-lg-3 offset-lg-1">
                     <div class="media contact-info">
                         <div class="media-body">
-                            <h6><i class="bi bi-house"></i> Citi Housing, Jhelum</h6>
+                            <h6><i class="bi bi-house"></i> Citi Housing, Jhelum, PK</h6>
                             <p>Basement, Malik Tower, Block B Citi Housing Jhelum</p>
+                            <h6><i class="bi bi-house"></i> Sheridan, Wyoming, USA</h6>
+                            <p>30 N Gould St. Ste 33293 Sheridan WY 82801, USA</p>
                         </div>
                     </div>
                     <div class="media contact-info">
@@ -77,7 +79,7 @@
                     </div>
                     <div class="media contact-info">
                         <div class="media-body">
-                            <h6><i class="bi bi-envelope"></i> Send us your query at!</h6>
+                            <h6><i class="bi bi-envelope"></i> Send us your query at</h6>
                             <a href="mailto:info@ecomgladiators.com"><p>info@ecomgladiators.com</p></a>
                         </div>
                     </div>

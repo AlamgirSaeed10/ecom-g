@@ -44,18 +44,15 @@
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
                      style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                     <h6 class="section-title bg-white text-center text-primary px-3">About Us</h6>
-                    <h1 class="mb-5">Welcome to Ecomgladiators</h1>
+                    <h1 class="mb-5">Welcome to Ecomgladiators!</h1>
 
-                    <p class="mb-4" style="text-align: justify;">Ecomgladiators empowers entrepreneurs, builds Amazon business to the next
-                        level, and
-                        drives
-                        better sales also help clients to navigate all challenges that USA and UK marketplaces throw at
-                        them. Ecomgladiators is
-                        serving the nation with professional Amazon training through which people become independent to
-                        earn their livelihood. We deliver
-                        client-based hands-on training to our candidates so that they launch their startups in the world
-                        of eCommerce to become
-                        successful entrepreneurs.</p>
+                    <p class="mb-4" style="text-align: justify;">EcomGladiators empowers entrepreneurs,
+                    elevates Amazon businesses to new heights, and drives improved sales while offering
+                    expert guidance to navigate diverse international marketplaces. With a commitment to
+                    providing professional Amazon training, EcomGladiators equips individuals with the
+                    skills to achieve financial independence. Our client-focused, hands-on training approach
+                    empowers candidates to launch successful eCommerce startups along with additional skills
+                    of digital marketing and much more to thrive as accomplished entrepreneurs.</p>
                     <div class="row gy-2 gx-4 mb-4 text-start">
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Empowering Entrepreneurs
@@ -74,18 +71,16 @@
                                 eCommerce</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Marketplaces Mastery</p>
+                            <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Digital Existence</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Amazon Business
-                                Acceleration
-                            </p>
+                            <p class="mb-0"><i class="bi bi-arrow-right text-primary me-2"></i>Multiple Income Sources</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="about-card">
-                <img id="ceo-img" src="{{asset('assets/img/gallery/N_kazim.png')}}" class="img-fluid" alt="ceo picture">
+                <img id="ceo-img" src="{{asset('assets/img/gallery/ceo.webp')}}" class="img-fluid" alt="ceo picture">
                 <p>Greetings! I am honored to be the CEO and Co-Founder of EcomGladiators Private Limited, a leading
                     eCommerce training and consulting company in Pakistan. With over 5 years of experience in the
                     eCommerce industry, I am passionate advocate for helping people start and grow their own
@@ -123,7 +118,7 @@
             </div>
             <div class="about-card">
 
-                <img id="coo-img" src="{{asset('assets/img/gallery/N_usama.png')}}" class="img-fluid" alt="coo picture">
+                <img id="coo-img" src="{{asset('assets/img/gallery/osama.webp')}}" class="img-fluid" alt="coo picture">
                 <p>I am a passionate advocate for the development of eCommerce in Pakistan. I believe that
                     Pakistan has the potential to be a major player in the global eCommerce market, but it
                     needs to overcome some challenges, such as a lack of awareness and a fear of

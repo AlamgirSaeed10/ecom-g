@@ -2,11 +2,6 @@
 @section('title',$title)
 @section('content')
 
-{{--    <div class="container-fluid" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">--}}
-{{--        <img src="{{asset('assets/img/hero/h1_hero.png')}}" class="img-fluid" alt="e-service verified logo is here"--}}
-{{--             style="max-height: 350px; min-width: 100%;">--}}
-{{--    </div>--}}
-
     <section class="py-5 mt-100">
         <div class="container">
             <div class="row justify-content-center">
@@ -18,7 +13,7 @@
             </div>
             <div class="row">
                 <div class="border col-lg-8 mx-auto pt-4 px-5 shadow">
-                    <h4 class="text-center pb-4">Please fill the form for your desired course intake</h4>
+                    <h4 class="text-center pb-4">Please fill the form for your desired course.</h4>
                     <form class="form-contact contact_form" id="enrollment_form"
                           action="{{ route('pages.store_enrollment') }}" id="enrollmentForm"
                           method="post" enctype="multipart/form-data">
@@ -156,11 +151,6 @@
                                 <div class="form-group">
                                     <select name="StudentEducation" class="form-select" id="StudentEducation" required>
                                         <option value="" selected>Select Education *</option>
-                                        <option value="Primary" {{ old('StudentEducation') ? 'selected' : '' }}>
-                                            Primary
-                                        </option>
-                                        <option value="Middle" {{ old('StudentEducation') ? 'selected' : '' }}>Middle
-                                        </option>
                                         <option value="Matriculation" {{ old('StudentEducation') ? 'selected' : '' }}>
                                             Matriculation
                                         </option>
@@ -278,22 +268,22 @@
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-12 bg-light p-3 justify-content-sm-around"
                                  style="text-align: justify;">
-                                <h3 class="text-dark">Terms & Conditions</h3>
-                                <ol style="text-align: justify; line-height:2">
+                                <h3 class="text-dark">Terms & Conditions:</h3>
+                                <ol style="line-height:2">
                                     <li>Upon enrollment, trainees are eligible for a full refund of their training fees
                                         within two (2) days from the date of registration.
                                     </li>
                                     <li>To request a refund within the eligibility period, trainees must submit a
                                         written request via email or in-person to the training coordinator.
                                     </li>
-                                    <li>After the two-day refund eligibility period, all training fees become
+                                    <li>After the two-day refund eligibility period, all training fees are
                                         non-refundable.
                                     </li>
-                                    <li>If, for any reason, the training program is canceled or rescheduled by
-                                        Ecomgladiators, alternative arrangements will be offered, and eligible trainees
-                                        may opt for a refund if desired.
+                                    <li>In the event that the training program is canceled or rescheduled by
+                                        Ecomgladiators, alternative arrangements will be offered. Eligible trainees
+                                        may also choose to receive a refund if desired.
                                     </li>
-                                    <li>On course completion, the candidate will be given the certificate only after the
+                                    <li>Upon course completion, candidates will receive the certificate upon
                                         successful assessment results.
                                     </li>
                                 </ol>
@@ -306,16 +296,16 @@
                                         <input class="form-check-input" type="checkbox" name="terms" id="terms_check"
                                                required>
                                         <label class="form-check-label" for="terms_check">
-                                            &nbsp; I accept the terms and conditions
+                                            &nbsp; I accept the terms and conditions.
                                         </label>
                                     </div>
                                     @error('terms')
-                                    <span class="text-danger">Please accept the terms and conditions to proceed</span>
+                                    <span class="text-danger">Please accept the terms and conditions to proceed.</span>
                                     @enderror
                                 </div>
                             </div>
                             <div class="col-sm-12 float-end mt-3">
-                                <button type="submit" id="btn-submit" class="btn btn-outline-primary mb-3">Enroll Now
+                                <button type="submit" id="btn-submit" class="btn btn-outline-primary mb-3">Enroll Now!
                                 </button>
 
                             </div>
@@ -324,7 +314,7 @@
                 </div>
             </div>
             <div class="container pt-4 px-5 mt-3">
-                <h5 class="text-center">FAQ</h5>
+                <h5 class="text-center">FAQs</h5>
                 <div class="accordion mt-5" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
