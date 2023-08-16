@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
+
 class EcomController extends Controller
 {
     // public function index()
@@ -14,7 +15,7 @@ class EcomController extends Controller
     //     $title = "We Empower Entrepreneurs";
     //     return view('pages.maintenance', compact('title'));
     // }
-    
+
     public function index()
     {
         $title = "We Empower Entrepreneurs";
@@ -26,6 +27,7 @@ class EcomController extends Controller
         $title = "About Us";
         return view('pages.about', compact('title'));
     }
+
     public function courses()
     {
         $title = "Courses";
@@ -44,7 +46,8 @@ class EcomController extends Controller
         return view('pages.contact-us', compact('title'));
     }
 
-    public function contact_us_form(Request $request){
+    public function contact_us_form(Request $request)
+    {
 
         $data = $request->validate([
             'name' => 'required',
@@ -66,7 +69,7 @@ class EcomController extends Controller
 
             $mail->setFrom($data['email'], $data['name']);
 
-            $mail->addAddress("info.ecomgladiators@gmail.com",$data['name']);
+            $mail->addAddress("info.ecomgladiators@gmail.com", $data['name']);
             $mail->Subject = 'Contact us Form Query From ' . $request->name;
             $mail->Body .= "Name : " . $data['name'] . "<br>";
             $mail->Body .= "Email : " . $data['email'] . "<br>";
@@ -77,9 +80,9 @@ class EcomController extends Controller
             $mail->send();
             $mail->ClearAddresses();
 
-            return redirect()->back()->with('success','Thank you for contacting Us. Our team will contact you shortly!  ');
+            return redirect()->back()->with('success', 'Thank you for contacting Us. Our team will contact you shortly!  ');
         } catch (Exception $e) {
-            return redirect()->back()->with('success','Email could not be sent. Error: ', $mail->ErrorInfo);
+            return redirect()->back()->with('success', 'Email could not be sent. Error: ', $mail->ErrorInfo);
         }
     }
 
@@ -94,22 +97,24 @@ class EcomController extends Controller
         $title = "Sitemap";
         return view('pages.sitemap', compact('title'));
     }
-    public function newsletter(Request $request){
-        DB::table('newsletter')->insert(['NewsletterEmail'=>$request->NewsletterEmail]);
-        return redirect()->back()->with('success','You have subscribed successfully. Our team will contact you shortly');
+
+    public function newsletter(Request $request)
+    {
+        DB::table('newsletter')->insert(['NewsletterEmail' => $request->NewsletterEmail, 'is_subscribe' => 1]);
+        return redirect()->back()->with('success', 'You have subscribed successfully. Our team will contact you shortly');
     }
 
-    public function feedback(Request $request){
+    public function feedback(Request $request)
+    {
         $Username = $request->Username;
         $Email = $request->Email;
         $Feedback = $request->Feedback;
         $CourseCode = $request->CourseCode;
         DB::table('course_feedback')->insert(
-            ['Username' =>$Username,'Email'=>$Email,'Message'=>$Feedback,'CourseCode'=>$CourseCode]);
-        return redirect()->back()->with('success','Thank you for your feedback');
+            ['Username' => $Username, 'Email' => $Email, 'Message' => $Feedback, 'CourseCode' => $CourseCode]);
+        return redirect()->back()->with('success', 'Thank you for your feedback');
     }
-    
-    
+
 
     public function get_quote(Request $request)
     {
@@ -134,10 +139,10 @@ class EcomController extends Controller
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
             $mail->setFrom('info.ecomgladiators@gmail.com', 'Ecom Gladiators');
-            $mail->addAddress("info.ecomgladiators@gmail.com",$request->cname);
+            $mail->addAddress("info.ecomgladiators@gmail.com", $request->cname);
             $mail->Subject = 'Request for Quotetaion from ' . $request->cname;
 
-            $mail->Body  = "Name: {$data['cname']}<br>";
+            $mail->Body = "Name: {$data['cname']}<br>";
             $mail->Body .= "Email: {$data['cemail']}<br>";
             $mail->Body .= "Contact: {$data['ccontact']}<br>";
             $mail->Body .= "Budget: {$data['cbudget']}<br>";
@@ -149,9 +154,9 @@ class EcomController extends Controller
             $mail->send();
             $mail->ClearAddresses();
 
-            return redirect()->back()->with('success','Thank you for your submission. Our sales representative will contact you shortly');
+            return redirect()->back()->with('success', 'Thank you for your submission. Our sales representative will contact you shortly');
         } catch (Exception $e) {
-            return redirect()->back()->with('success','Email could not be sent. Error: ', $mail->ErrorInfo);
+            return redirect()->back()->with('success', 'Email could not be sent. Error: ', $mail->ErrorInfo);
         }
     }
 

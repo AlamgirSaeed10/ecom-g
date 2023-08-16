@@ -1,29 +1,28 @@
 @extends('includes.master')
 @section('title', $title)
 @section('content')
-    <head>
-        <link rel="stylesheet" href="{{asset('assets/css/tm-swiper-bundle.min.css')}}"/>
-        <link rel="stylesheet" href="{{asset('assets/css/tm-style.css')}}"/>
-    </head>
+
     <div class="container-xxl mt-5">
         <div class="container">
 
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
-                <h4 class="mb-5">Transform your vision into reality with our comprehensive suite of professional services.</h4>
+                <h1 class="mb-5">Global E-commerce Business</h1>
             </div>
 
             <div class="" style="text-align: justify;">
 
                 <div class="row">
                     <div class="col-lg-4 d-none d-md-none  d-lg-block">
-                        <img src="{{asset('assets/img/gallery/service_start.webp')}}" width="100%" class="img-fluid" alt="Global E-commerce Business">
+                        <img
+
+                            src="{{asset('assets/img/gallery/delivery.jpg')}}"
+                            width="100%" class="img-fluid"
+                            alt="Global E-commerce Business">
                     </div>
-                    
                     <div class="col-sm-12 col-md-12 col-lg-8 p-4">
-                        <!--<p style= float: left;></p>-->
-                        <p><strong>Global E-commerce Business</strong><br>Welcome to Ecomgladiators, your premier e-commerce service provider specializing in Amazon
+                        <p>Welcome to Ecomgladiators, your premier e-commerce service provider specializing in Amazon
                             wholesale
                             and private label business services.
                             With a focus on key marketplaces such as the USA, UK, Germany, Canada, UAE, Italy, and
@@ -46,15 +45,15 @@
 
         </div>
     </div>
+
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row">
-                <div class="slider" style="max-width:1240px">
-                <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="owl-carousel owl-theme d-none d-md-block" id="card-carousel-web">
+                <div class="col-lg-12 col-md-6 col-sm-12 p-2">
                     <div class="card">
                         <div class="card-head">
                             <i class="bi bi-box-seam card-head-icon text-center" aria-expanded="false"></i>
-                            <h5>Wholesale FBA Business</h5>
+                            <h5>Wholesale Business</h5>
                         </div>
                         <div class="card-body text-start custom-hover">
                             <p><i class="bi bi-gem" aria-expanded="false"></i> Research Brands/Distributors</p>
@@ -66,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-lg-12 col-md-6 col-sm-12 p-2">
                     <div class="card">
                         <div class="card-head">
                             <i class="bi bi-arrow-counterclockwise card-head-icon text-center"
@@ -83,15 +82,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-lg-12 col-md-6 col-sm-12 p-2">
                     <div class="card">
                         <div class="card-head">
-                            <i class="bi bi-tags card-head-icon text-center"
-                               aria-expanded="false"></i>
+                            <i class="bi bi-tags card-head-icon text-center" aria-expanded="false"></i>
                             <h5>Private Label Business</h5>
                         </div>
                         <div class="card-body text-start custom-hover">
-
                             <p><i class="bi bi-gem" aria-expanded="false"></i> Market Research </p>
                             <p><i class="bi bi-gem" aria-expanded="false"></i> Product Selection</p>
                             <p><i class="bi bi-gem" aria-expanded="false"></i> EBC (Enhanced Brand Content)</p>
@@ -101,19 +98,16 @@
                             <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> PPC Campaign</p>
                             <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Launch and Monitor
                             </p>
-
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-lg-12 col-md-6 col-sm-12 p-2">
                     <div class="card">
                         <div class="card-head">
-                            <i class="bi bi-building card-head-icon text-center"
-                               aria-expanded="false"></i>
+                            <i class="bi bi-building card-head-icon text-center" aria-expanded="false"></i>
                             <h5>LLC/LTD (Company) Registration</h5>
                         </div>
                         <div class="card-body text-start custom-hover">
-
                             <p><i class="bi bi-gem" aria-expanded="false"></i> Unique Business Address </p>
                             <p><i class="bi bi-gem" aria-expanded="false"></i> LLC state filing </p>
                             <p><i class="bi bi-gem" aria-expanded="false"></i> EIN Registration </p>
@@ -128,36 +122,30 @@
                                 Standing </p>
                             <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> US phone number </p>
                             <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Amazon Account </p>
-
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-lg-12 col-md-6 col-sm-12 p-2">
                     <div class="card">
                         <div class="card-head">
-                            <i class="bi bi-trophy card-head-icon text-center"
-                               aria-expanded="false"></i>
+                            <i class="bi bi-trophy card-head-icon text-center" aria-expanded="false"></i>
                             <h5>Brand Approval & Winning Product</h5>
                         </div>
                         <div class="card-body text-start custom-hover">
-
                             <p><i class="bi bi-gem" aria-expanded="false"></i> Communication and Documentation </p>
                             <p><i class="bi bi-gem" aria-expanded="false"></i> Domain-Specific Account Approval </p>
                             <p><i class="bi bi-gem" aria-expanded="false"></i> Product on suggested criteria </p>
                             <p><i class="bi bi-gem" aria-expanded="false"></i> Restocking and Labeling </p>
-
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-lg-12 col-md-6 col-sm-12 p-2">
                     <div class="card">
                         <div class="card-head">
-                            <i class="bi bi-code-slash card-head-icon text-center"
-                               aria-expanded="false"></i>
+                            <i class="bi bi-code-slash card-head-icon text-center" aria-expanded="false"></i>
                             <h5>Ecommerce Website Development</h5>
                         </div>
                         <div class="card-body text-start custom-hover">
-
                             <p><i class="bi bi-gem" aria-expanded="false"></i> E-commerce Website Design </p>
                             <p><i class="bi bi-gem" aria-expanded="false"></i> Custom E-commerce Development </p>
                             <p><i class="bi bi-gem" aria-expanded="false"></i> E-commerce Platform Selection </p>
@@ -173,86 +161,225 @@
                                 Maintenance </p>
                             <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> E-commerce Consulting
                                 and Strategy </p>
-
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
 
+            <div class="owl-carousel owl-theme d-md-none" id="card-carousel-mobile">
+                <div class="col-sm-12 col-lg-4 col-md-12">
+                    <div class="card">
+                        <div class="card-head">
+                            <i class="bi bi-box-seam card-head-icon text-center" aria-expanded="false"></i>
+                            <h5>Wholesale Business</h5>
+                        </div>
+                        <div class="card-body text-start custom-hover">
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Research Brands/Distributors</p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Winning Product Selection</p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Source and negotiate with suppliers </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Shipment and Restocking</p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Sales and order
+                                management</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 col-md-12">
+                    <div class="card">
+                        <div class="card-head">
+                            <i class="bi bi-arrow-counterclockwise card-head-icon text-center"
+                               aria-expanded="false"></i>
+                            <h5>Amazon Account Reinstatement</h5>
+                        </div>
+                        <div class="card-body text-start custom-hover">
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Violation Analysis</p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> POA (Plan of Action)</p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Inventory/Account Evaluation</p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Suspension Appeal</p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Prevent Future
+                                Violations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 col-md-12">
+                    <div class="card">
+                        <div class="card-head">
+                            <i class="bi bi-tags card-head-icon text-center" aria-expanded="false"></i>
+                            <h5>Private Label Business</h5>
+                        </div>
+                        <div class="card-body text-start custom-hover">
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Market Research </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Product Selection</p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> EBC (Enhanced Brand Content)</p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Research and Source Supplier</p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Fulfillment and
+                                Logistics</p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> PPC Campaign</p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Launch and Monitor
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 col-md-12">
+                    <div class="card">
+                        <div class="card-head">
+                            <i class="bi bi-building card-head-icon text-center" aria-expanded="false"></i>
+                            <h5>LLC/LTD (Company) Registration</h5>
+                        </div>
+                        <div class="card-body text-start custom-hover">
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Unique Business Address </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> LLC state filing </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> EIN Registration </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Payoneer Account </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Article of
+                                Organization/Certificate of Formation </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Reseller Certificate
+                            </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Validation
+                                Certificate </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Cert. of Good
+                                Standing </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> US phone number </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Amazon Account </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 col-md-12">
+                    <div class="card">
+                        <div class="card-head">
+                            <i class="bi bi-trophy card-head-icon text-center" aria-expanded="false"></i>
+                            <h5>Brand Approval & Winning Product</h5>
+                        </div>
+                        <div class="card-body text-start custom-hover">
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Communication and Documentation </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Domain-Specific Account Approval </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Product on suggested criteria </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Restocking and Labeling </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 col-md-12">
+                    <div class="card">
+                        <div class="card-head">
+                            <i class="bi bi-code-slash card-head-icon text-center" aria-expanded="false"></i>
+                            <h5>Ecommerce Website Development</h5>
+                        </div>
+                        <div class="card-body text-start custom-hover">
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> E-commerce Website Design </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> Custom E-commerce Development </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> E-commerce Platform Selection </p>
+                            <p><i class="bi bi-gem" aria-expanded="false"></i> E-commerce Website Migration </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Payment Gateway
+                                Integration </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> E-commerce SEO </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> E-commerce Analytics
+                                and Reporting </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Mobile App
+                                Development </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> Ongoing Support and
+                                Maintenance </p>
+                            <p class="hidden-desc"><i class="bi bi-gem" aria-expanded="false"></i> E-commerce Consulting
+                                and Strategy </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
-    
-    
-    <!--<div class="container-xxl py-5 wow fadeInUp text-center" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">-->
-    <!--    <div class="container">-->
-    <!--        <div class="testimonial mySwiper">-->
-    <!--            <div class="testi-content swiper-wrapper">-->
-    <!--                <div class="slide swiper-slide">-->
-    <!--                    <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="user testimonial image" class="image"/>-->
-    <!--                    <p>-->
-    <!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,-->
-    <!--                        saepe provident dolorem a quaerat quo error facere nihil deleniti-->
-    <!--                        eligendi ipsum adipisci, fugit, architecto amet asperiores-->
-    <!--                        doloremque deserunt eum nemo.-->
-    <!--                    </p>-->
-
-    <!--                    <i class="bx bxs-quote-alt-left tm-quote-icon"><a-->
-    <!--                            href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>-->
 
 
-    <!--                    <div class="details">-->
-    <!--                        <span class="name">Marnie Lotter</span>-->
-    <!--                        <span class="job">Web Developer</span>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--                <div class="slide swiper-slide">-->
-    <!--                    <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="user testimonial image"  class="image"/>-->
-    <!--                    <p>-->
-    <!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,-->
-    <!--                        saepe provident dolorem a quaerat quo error facere nihil deleniti-->
-    <!--                        eligendi ipsum adipisci, fugit, architecto amet asperiores-->
-    <!--                        doloremque deserunt eum nemo.-->
-    <!--                    </p>-->
 
-    <!--                    <i class="bx bxs-quote-alt-left tm-quote-icon"><a-->
-    <!--                            href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>-->
 
-    <!--                    <div class="details">-->
-    <!--                        <span class="name">Marnie Lotter</span>-->
-    <!--                        <span class="job">Web Developer</span>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--                <div class="slide swiper-slide">-->
-    <!--                    <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="user testimonial image"  class="image"/>-->
-    <!--                    <p>-->
-    <!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,-->
-    <!--                        saepe provident dolorem a quaerat quo error facere nihil deleniti-->
-    <!--                        eligendi ipsum adipisci, fugit, architecto amet asperiores-->
-    <!--                        doloremque deserunt eum nemo.-->
-    <!--                    </p>-->
 
-    <!--                    <i class="bx bxs-quote-alt-left tm-quote-icon"><a-->
-    <!--                            href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>-->
 
-    <!--                    <div class="details">-->
-    <!--                        <span class="name">Marnie Lotter</span>-->
-    <!--                        <span class="job">Web Developer</span>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--            <div class="swiper-button-next nav-btn"></div>-->
-    <!--            <div class="swiper-button-prev nav-btn"></div>-->
-    <!--            <div class="swiper-pagination"></div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</div>-->
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container-xxl py-5 wow fadeInUp text-center visually-hidden" data-wow-delay="0.1s"
+         style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+        <div class="container">
+            <div class="testimonial mySwiper">
+                <div class="testi-content swiper-wrapper">
+                    <div class="slide swiper-slide">
+                        <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="" class="image"/>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                            saepe provident dolorem a quaerat quo error facere nihil deleniti
+                            eligendi ipsum adipisci, fugit, architecto amet asperiores
+                            doloremque deserunt eum nemo.
+                        </p>
+
+                        <i class="bx bxs-quote-alt-left tm-quote-icon"><a
+                                href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>
+
+
+                        <div class="details">
+                            <span class="name">Marnie Lotter</span>
+                            <span class="job">Web Developer</span>
+                        </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="" class="image"/>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                            saepe provident dolorem a quaerat quo error facere nihil deleniti
+                            eligendi ipsum adipisci, fugit, architecto amet asperiores
+                            doloremque deserunt eum nemo.
+                        </p>
+
+                        <i class="bx bxs-quote-alt-left tm-quote-icon"><a
+                                href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>
+
+                        <div class="details">
+                            <span class="name">Marnie Lotter</span>
+                            <span class="job">Web Developer</span>
+                        </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <img src="{{asset('assets/img/icon/user-icon.png')}}" alt="" class="image"/>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                            saepe provident dolorem a quaerat quo error facere nihil deleniti
+                            eligendi ipsum adipisci, fugit, architecto amet asperiores
+                            doloremque deserunt eum nemo.
+                        </p>
+
+                        <i class="bx bxs-quote-alt-left tm-quote-icon"><a
+                                href="https://www.google.com" class="text-white" target="_blank"> Listen Video</a> </i>
+
+                        <div class="details">
+                            <span class="name">Marnie Lotter</span>
+                            <span class="job">Web Developer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next nav-btn"></div>
+                <div class="swiper-button-prev nav-btn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="container-fluid bg-primary" style="margin-bottom: -50px">
         <div class="container py-3">
             <div class="d-flex justify-content-between align-items-center">
@@ -263,16 +390,18 @@
                     </a>
                 </div>
                 <div class="d-none d-lg-block">
-                    <p class="text-white">Curious to know more about our services?</p>
-                    <p class="text-white">Take advantage of our free consultation, and let's discuss how we can assist you.</p>
+                    <p class="text-white">Do you have any question about our services?</p>
+                    <p class="text-white">We provide free consultation so let's talk with us</p>
                 </div>
                 <div class="justify-content-between">
-                    <a class="btn btn-outline-light text-uppercase rounded-3" href="tel:+923279942799">"Complimentary Consultation" <br> Call Now!</a>
+                    <a class="btn btn-outline-light text-uppercase rounded-3" href="tel:+923190143276">Call for Free
+                        Consultation</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="get-quote" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="get-quote" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -352,54 +481,35 @@
                 </div>
             </div>
         </div>
-    </div>  
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
- 
-    <script src="{{asset('assets/js/tm-swiper-bundle.min.js')}}"></script>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            grabCursor: true,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
+        // Initialize Owl Carousel for web
+        $(document).ready(function () {
+            $('#card-carousel-web').owlCarousel({
+                items: 3, // Display 3 items on desktop
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                nav: false,
+                dots: true
+            });
         });
-       
-    jQuery(document).ready(function($) {
-      $('.slider').slick({
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: true,
-        responsive: [{
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        },
-        {
-           breakpoint: 400,
-           settings: {
-              arrows: false,
-              slidesToShow: 1,
-              slidesToScroll: 1
-           }
-        }]
-    });
-});
+
+        // Initialize Owl Carousel for mobile
+        $(document).ready(function () {
+            $('#card-carousel-mobile').owlCarousel({
+                items: 1, // Display 3 items on desktop
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                nav: false,
+                dots: true
+            });
+        });
     </script>
-    
+
+
 @endsection

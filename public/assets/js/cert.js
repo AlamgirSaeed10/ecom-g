@@ -1,3 +1,4 @@
+
 let uri = '';
 
 
@@ -14,18 +15,18 @@ const part3 = "\n \t \t \t \t \t the assessment on ";
 
 const generatePDF = async (sname, cname, cdate,certUrl) => {
     const {PDFDocument, rgb} = PDFLib;
-    
-     const pdfUrl = 'https://www.ecomgladiators.com/public/assets/img/cert/cert.pdf';
+
+     const pdfUrl = 'http://127.0.0.1:8000/assets/img/cert/cert.pdf';
     const exBytes = await fetch(pdfUrl).then((res) => {
         return res.arrayBuffer();
     });
 
-     const fontUrl = 'https://www.ecomgladiators.com/public/assets/css/fonts/Poppins-Medium.ttf';
+     const fontUrl = 'http://127.0.0.1:8000/assets/css/fonts/Poppins-Medium.ttf';
     const exFont = await fetch(fontUrl).then((res) => {
         return res.arrayBuffer();
     });
-    
-    const TitleFontUrl = 'https://www.ecomgladiators.com/public/assets/css/fonts/Poppins-Bold.ttf';
+
+    const TitleFontUrl = 'http://127.0.0.1:8000/assets/css/fonts/Poppins-Bold.ttf';
     const TitleExFont = await fetch(TitleFontUrl).then((res) => {
         return res.arrayBuffer();
     });
@@ -35,7 +36,7 @@ const generatePDF = async (sname, cname, cdate,certUrl) => {
     pdfDoc.setAuthor('ecomgladiators | we empower entrepreneur')
     pdfDoc.setCreator('ecomgladiators | we empower entrepreneur')
     pdfDoc.setCreationDate(new Date())
-    
+
     pdfDoc.registerFontkit(fontkit)
     const myFont = await pdfDoc.embedFont(exFont);
     const titleFont = await pdfDoc.embedFont(TitleExFont);
@@ -48,15 +49,15 @@ const generatePDF = async (sname, cname, cdate,certUrl) => {
 
     const textSize = 35;
     const urlTextSize = 15;
-    
+
     pdfDoc.setTitle('Ecomgladiators');
     pdfDoc.setAuthor('Muhammad Ali');
     pdfDoc.setSubject('Assessment Certificate');
     pdfDoc.setKeywords(['ecommerce','certificate']);
     pdfDoc.setProducer('Ammar Haider');
     pdfDoc.setCreator('Muhammad Ali');
-  
- 
+
+
 
     StudentName.drawText(sname, {
         x: StudentName.getWidth() / 2 - titleFont.widthOfTextAtSize(sname, textSize) / 2,
@@ -94,4 +95,4 @@ download_cert.addEventListener('click', () => {
     saveAs(uri, StdName + "-" + CompDate, {autoBom: true});
 
 })
-generatePDF(StdName, part1 + CrsName + part2 + part3, "\t \"  " + CompDate + " \" " ,CertUrl);
+generatePDF(StdName, part1 + CrsName + part2 + part3, "\t \"  " + CompDate + " \" ", CertUrl);

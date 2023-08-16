@@ -48,9 +48,13 @@ Route::get('freelancing',[CoursesController::class,'freelancing'])->name('course
 Route::get('onlinearbitrage',[CoursesController::class,'online_arbitrage'])->name('courses.online-arbitrage');
 
 
+Route::get('unsubscribe',[EnrollmentController::class,'unsubscribe'])->name('unsubscribe');
+
+
 
 Route::fallback( function (){
     $title = "404 - Page not Found";
     return view('pages.404-error',compact('title'));
 
 })->name('fallback');
+

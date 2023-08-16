@@ -70,7 +70,7 @@ class EnrollmentController extends Controller
 
             $mail = new PHPMailer(true);
             try {
-                $mail->SMTPDebug = 1;
+                $mail->SMTPDebug = 0;
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
@@ -79,9 +79,9 @@ class EnrollmentController extends Controller
                 $mail->SMTPSecure = 'tls';
                 $mail->Port = 587;
 
-                $mail->setFrom('admission@ecomgladiators.com', 'Ecomgladiators');
+                $mail->setFrom('admission@ecomgladiators.com', 'Ecomgladiators Private LTD.');
 
-                $mail->addAddress('info.ecomgladiators@gmail.com', 'Ecomgladiators');
+//                $mail->addAddress('info.ecomgladiators@gmail.com', 'Ecomgladiators');
                 $mail->Subject = 'Student Enrollment Form ' . $request->StudentName;
                 $mail->Body .= "Plan ID: " . $request->PlanID . "<br>";
                 $mail->Body .= "Course Code: " . implode(',', $request->course_selected) . "<br>";
@@ -97,8 +97,16 @@ class EnrollmentController extends Controller
                 $mail->Body .= "Payment Option: " . $request->PaymentOption . "<br>";
                 $mail->Body .= "How did you know about us? " . $request->KnowAboutUs . "<br>";
 
-                $mail->isHTML(true);
+//                $mail->isHTML(true);
+//                $mail->send();
+                $std_name = $request->StudentName;
+                $mail->addAddress($request->StudentEmail, $std_name );
+                $mail->Subject = 'Student Enrollment Form ' . $std_name;
+                $emailTemplate = view('email',compact('std_name'))->render();
+                $mail->msgHTML($emailTemplate);
                 $mail->send();
+
+
                 $mail->ClearAddresses();
 
                 return redirect()->back()->with('success', 'Congratulations on successfully enrolling! Our team will be in touch with you shortly');
@@ -107,6 +115,12 @@ class EnrollmentController extends Controller
             }
             }
         return redirect()->back()->with('success', 'Our team will contact you shortly... Please be patient.');
+    }
+
+    public function unsubscribe()
+    {
+        return 'unsubscribe';
+
     }
 }
 
